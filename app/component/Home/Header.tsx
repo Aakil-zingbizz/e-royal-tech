@@ -18,7 +18,7 @@ const Header = () => {
             <Link href="/" className="text-[#006CB8] font-semibold border-b-2 border-[#006CB8] py-1">
               Home
             </Link>
-            <Link href="#" className="text-[#333333] hover:text-[#006CB8] font-medium transition-colors">
+            <Link href="/about" className="text-[#333333] hover:text-[#006CB8] font-medium transition-colors">
               About us
             </Link>
             <div className="relative group cursor-pointer">
@@ -29,7 +29,7 @@ const Header = () => {
                 </svg>
               </div>
             </div>
-            <Link href="#" className="text-[#333333] hover:text-[#006CB8] font-medium transition-colors">
+            <Link href="/career" className="text-[#333333] hover:text-[#006CB8] font-medium transition-colors">
               Careers
             </Link>
             <Link href="#" className="text-[#333333] hover:text-[#006CB8] font-medium transition-colors">
@@ -39,7 +39,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
-            <Link href="#contact" className="bg-[#006CB8] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#005A9C] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#006CB8]">
+            <Link href="/contact" className="bg-[#006CB8] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#005A9C] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#006CB8]">
               Contact Us
             </Link>
           </div>
