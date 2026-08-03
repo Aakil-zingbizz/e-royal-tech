@@ -27,7 +27,7 @@ const LogoCarousel = () => {
           {logos.map((logo, index) => (
             <div
               key={`logo-1-${index}`}
-              className="flex-shrink-0 w-32 md:w-40 lg:w-48 h-24 relative flex items-center justify-center"
+              className="flex-shrink-0 w-32 md:w-40 lg:w-48 h-24 relative flex items-center justify-center grayscale-100"
             >
               <Image
                 src={logo}
@@ -54,8 +54,6 @@ const LogoCarousel = () => {
             </div>
           ))}
         </div>
-
-
       </div>
     </section>
   );
