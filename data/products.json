@@ -1,0 +1,666 @@
+[
+  {
+    "id": "impex",
+    "slug": "impex",
+    "aliases": [
+      "eroyal-impex",
+      "impex-customs",
+      "icegate-filing-software",
+      "customs-filing-software"
+    ],
+    "name": "eRoyal IMPEX",
+    "titlePrefix": "eRoyal",
+    "titleHighlight": "IMPEX",
+    "tagline": "Smart Customs Filing for Faster Global Trade",
+    "shortDescription": "eRoyal IMPEX is a cloud-based ICEGATE customs filing software that helps customs brokers, importers, exporters, and logistics providers simplify Shipping Bills, Bills of Entry, customs documentation, and regulatory compliance through one secure platform.",
+
+    "logo": "/home/product-logo/impex.svg",
+    "mockupImage": "/products/impex-mockup.png",
+
+    "banner": {
+      "titlePrefix": "eRoyal",
+      "titleHighlight": "IMPEX",
+      "highlightColor": "#FFB800",
+      "tagline": "Smart Customs Filing for Faster Global Trade",
+      "description": "Simplify Shipping Bills, Bills of Entry, and ICEGATE filing with a secure cloud-based customs management platform built for customs brokers, importers, exporters, and logistics professionals.",
+
+      "highlights": [
+        "24/7 Expert Technical Support",
+        "Regular Compliance & Software Updates",
+        "Secure Cloud-Based Platform"
+      ],
+
+      "primaryCta": {
+        "text": "Request a Demo",
+        "href": "/contact"
+      },
+
+      "secondaryCta": {
+        "text": "Explore Our Solutions",
+        "href": "/products"
+      },
+
+      "mockupBadge": {
+        "title": "E-IMPEX",
+        "subtitle": "ICEGATE Customs Filing Software"
+      },
+
+      "mockupImage": "/products/dashboard-mockup.png"
+    },
+
+    "features": {
+      "badge": "Core Capabilities",
+
+      "heading": "Everything You Need for Seamless Customs Filing",
+
+      "description": "Powerful tools designed to simplify customs documentation, improve visibility, and streamline import and export operations.",
+
+      "items": [
+        {
+          "title": "ICEGATE Filing Automation",
+          "badge": "ICEGATE Integration",
+          "description": "Simplify Shipping Bill and Bill of Entry filing through seamless ICEGATE integration. Create, validate, submit, and manage customs declarations while reducing manual effort and improving filing accuracy.",
+          "icon": "/products/icons/shield.svg"
+        },
+
+        {
+          "title": "Secure Document Management",
+          "badge": "Digital Documentation",
+          "description": "Upload, organize, and securely manage Shipping Bills, Bills of Entry, invoices, declarations, and supporting customs documents from one centralized platform.",
+          "icon": "/products/icons/folder.svg"
+        },
+
+        {
+          "title": "Real-Time Filing Tracking",
+          "badge": "Live Status Updates",
+          "description": "Track the status of every customs filing in real time, helping your team reduce delays, improve visibility, and manage import-export operations more efficiently.",
+          "icon": "/products/icons/activity.svg"
+        }
+      ]
+    },
+
+    "sez": {
+      "badge": "Specialized Module",
+
+      "heading": "Special Economic Zone (SEZ) Customs Filing",
+
+      "description": "eRoyal IMPEX SEZ is a dedicated module built for businesses operating within Special Economic Zones (SEZs). It simplifies SEZ customs documentation, streamlines import and export filing workflows, and helps organizations maintain compliance with evolving SEZ regulations.",
+
+      "features": [
+        {
+          "title": "SEZ Bill of Entry Filing",
+          "description": "Digitally prepare and manage Bill of Entry transactions specifically designed for SEZ customs procedures."
+        },
+        {
+          "title": "SEZ Shipping Bill Management",
+          "description": "Simplify Shipping Bill filing for SEZ exports while reducing documentation complexity and manual processing."
+        },
+        {
+          "title": "Automated SEZ Documentation",
+          "description": "Generate and organize SEZ customs documents through standardized digital workflows for improved operational efficiency."
+        },
+        {
+          "title": "Regulatory Compliance",
+          "description": "Stay aligned with the latest SEZ customs procedures through continuous software updates and compliance enhancements."
+        }
+      ],
+
+      "benefits": [
+        "Purpose-built for Special Economic Zone operations",
+        "Integrated with eRoyal IMPEX customs workflows",
+        "Reduced manual documentation",
+        "Improved filing accuracy",
+        "Faster customs processing",
+        "Cloud-based accessibility"
+      ],
+
+      "image": "/products/SEZ.png"
+    },
+
+    "counter": {
+      "target": 100000,
+      "suffix": "+",
+      "description": "Trusted by businesses to streamline customs documentation and ICEGATE filing, helping import and export operations stay accurate, compliant, and efficient."
+    },
+    "targetAudience": {
+      "badge": "Who We Serve",
+
+      "headingPrefix": "Built for Businesses That Keep",
+      "headingHighlight": "Global Trade Moving",
+
+      "description": "Whether you're filing customs declarations, managing cross-border shipments, or coordinating logistics operations, eRoyal IMPEX provides a faster, smarter way to manage ICEGATE filing, streamline customs documentation, ensure regulatory compliance, and simplify import-export workflows—all from one secure cloud-based platform.",
+
+      "trustedByText": "Trusted by",
+
+      "audiences": [
+        {
+          "title": "Customs Brokers\n& CHAs",
+          "icon": "users"
+        },
+        {
+          "title": "Importers &\nExporters",
+          "icon": "globe"
+        },
+        {
+          "title": "Freight\nForwarders",
+          "icon": "truck"
+        },
+        {
+          "title": "NVOCC\nOperators",
+          "icon": "ship"
+        },
+        {
+          "title": "Shipping\nAgencies",
+          "icon": "anchor"
+        },
+        {
+          "title": "Logistics\nProviders",
+          "icon": "box"
+        }
+      ],
+
+      "image": "/products/impex-audience.svg"
+    },
+
+    "industryRecognition": {
+      "badge": "Industry Recognition",
+
+      "heading": "Recognized Across India's Logistics & Trade Industry",
+
+      "description": "eRoyal IMPEX has been showcased at leading logistics and international trade exhibitions, demonstrating innovative customs filing and digital trade solutions while connecting with customs professionals, freight forwarders, importers, exporters, and logistics leaders across India.",
+
+      "events": [
+        {
+          "title": "SeAiRO Expo",
+          "subtitle": "Air Cargo & Logistics Exhibition",
+          "image": "/products/events/seairo.png"
+        },
+        {
+          "title": "India International Cargo & Multimodal Logistics Show (IICS)",
+          "subtitle": "International Logistics & Supply Chain Exhibition",
+          "image": "/products/events/iics.png"
+        },
+        {
+          "title": "SOUMEX Expo",
+          "subtitle": "Trade & Logistics Exhibition",
+          "image": "/products/events/soumex.png"
+        },
+        {
+          "title": "CTL BHP Expo",
+          "subtitle": "Logistics Technology Exhibition",
+          "image": "/products/events/ctl-bhp.png"
+        }
+      ]
+    },
+
+    "whyChoose": {
+      "badge": "Why Choose eRoyal IMPEX",
+
+      "heading": "Built for Performance. Trusted for Compliance.",
+
+      "description": "Designed for customs brokers, importers, exporters, and logistics providers, eRoyal IMPEX combines automation, compliance, and security to simplify customs operations and accelerate global trade.",
+
+      "items": [
+        {
+          "title": "100% Cloud-Based Platform",
+          "description": "Access your customs operations securely from anywhere without software installation or local infrastructure.",
+          "icon": "/products/icons/cloud.svg"
+        },
+        {
+          "title": "Latest ICEGATE & Customs Updates",
+          "description": "Stay aligned with the latest ICEGATE requirements, customs notifications, tariff revisions, and exchange rate updates.",
+          "icon": "/products/icons/update.svg"
+        },
+        {
+          "title": "User-Friendly Interface",
+          "description": "An intuitive interface that simplifies customs documentation, reduces training time, and improves team productivity.",
+          "icon": "/products/icons/layout.svg"
+        },
+        {
+          "title": "Operational Efficiency",
+          "description": "Automate repetitive customs processes, reduce manual errors, and accelerate import-export operations with streamlined digital workflows.",
+          "icon": "/products/icons/zap.svg"
+        }
+      ]
+    },
+
+    "testimonials": [
+      {
+        "quote": "I am extremely satisfied with using eRoyal IMPEX and grateful that we chose the right software for our business. The product is innovative, reliable, and built with the latest technology.",
+        "name": "Saravanan",
+        "title": "Managing Director, Super Shipping Service, Chennai"
+      },
+      {
+        "quote": "The direct ICEGATE integration and automated customs workflows have significantly reduced our filing time while improving operational efficiency.",
+        "name": "R. Kumar",
+        "title": "Customs Operations Manager"
+      }
+    ],
+
+    "cta": {
+      "badge": "Ready to Get Started?",
+
+      "heading": "Transform Your Customs Operations with eRoyal IMPEX",
+
+      "description": "Simplify ICEGATE filing, Shipping Bills, Bills of Entry, and customs documentation through one secure cloud-based platform. Schedule a personalized demo and discover how eRoyal IMPEX can help your business improve compliance, reduce manual work, and accelerate global trade.",
+
+      "primaryCta": {
+        "text": "Request a Demo",
+        "href": "/contact"
+      },
+
+      "secondaryCta": {
+        "text": "Contact Sales",
+        "href": "/contact"
+      }
+    }
+  },
+  {
+    "id": "freight",
+    "slug": "freight",
+    "aliases": ["eroyal-freight", "freight-forwarding"],
+    "name": "eRoyal FREIGHT",
+    "titlePrefix": "eRoyal",
+    "titleHighlight": "FREIGHT",
+    "tagline": "Smarter Freight Forwarding for Seamless Global Logistics",
+    "shortDescription": "Streamline freight forwarding operations with a cloud-based platform that automates documentation, shipment tracking, compliance, and reporting for air, sea, and multimodal logistics.",
+    "logo": "/home/product-logo/freight.svg",
+    "mockupImage": "/products/freight-mockup.png",
+
+    "banner": {
+      "titlePrefix": "eRoyal",
+      "titleHighlight": "FREIGHT",
+      "highlightColor": "#006CB8",
+      "tagline": "Smarter Freight Forwarding for Seamless Global Logistics",
+      "description": "Simplify freight documentation, automate shipment workflows, and monitor operations in real time with a secure platform built for modern freight forwarders.",
+      "highlights": [
+        "24/7 Expert Technical Support",
+        "AI-Powered Document Generation",
+        "Secure Cloud-Based Platform"
+      ],
+      "primaryCta": {
+        "text": "Request a Demo",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "text": "Explore Our Solutions",
+        "href": "/products"
+      },
+      "mockupBadge": {
+        "title": "E-FREIGHT",
+        "subtitle": "Freight Forwarding Management Software"
+      },
+      "mockupImage": "/products/dashboard-mockup.png"
+    },
+
+    "features": {
+      "badge": "Core Capabilities",
+      "heading": "Everything You Need to Manage Freight Operations",
+      "description": "Powerful tools designed to simplify freight forwarding, automate documentation, and improve shipment visibility.",
+
+      "items": [
+        {
+          "title": "Document Management",
+          "badge": "Freight Documentation",
+          "description": "Generate and manage Bills of Lading, Commercial Invoices, Packing Lists, and customs documents from one centralized platform.",
+          "icon": "/products/icons/folder.svg"
+        },
+        {
+          "title": "AI-Powered Document Generation",
+          "badge": "AI Automation",
+          "description": "Automatically generate PDF documents using AI-powered workflows to reduce manual effort and improve documentation accuracy.",
+          "icon": "/products/icons/brain.svg"
+        },
+        {
+          "title": "Real-Time Shipment Monitoring",
+          "badge": "Live Tracking",
+          "description": "Track shipments with real-time dashboards, automated reports, and intelligent reminders to improve operational visibility.",
+          "icon": "/products/icons/activity.svg"
+        }
+      ]
+    },
+
+    "counter": {
+      "target": 100000,
+      "suffix": "+",
+      "description": "Supporting freight forwarders with reliable documentation, shipment visibility, and efficient logistics operations."
+    },
+
+    "targetAudience": {
+      "badge": "Who We Serve",
+      "headingPrefix": "Built for Businesses That Drive",
+      "headingHighlight": "Global Freight Forwarding",
+      "description": "Whether you're coordinating international shipments, managing freight documentation, or handling multimodal logistics, eRoyal FREIGHT helps simplify operations, improve shipment visibility, and streamline freight forwarding workflows through one secure cloud-based platform.",
+      "trustedByText": "Trusted by",
+
+      "audiences": [
+        {
+          "title": "Freight\nForwarders",
+          "icon": "truck"
+        },
+        {
+          "title": "Logistics\nCompanies",
+          "icon": "box"
+        },
+        {
+          "title": "Shipping\nAgencies",
+          "icon": "anchor"
+        },
+        {
+          "title": "Air Freight\nOperators",
+          "icon": "plane"
+        },
+        {
+          "title": "Sea Freight\nOperators",
+          "icon": "ship"
+        },
+        {
+          "title": "Supply Chain\nProviders",
+          "icon": "globe"
+        }
+      ],
+
+      "image": "/products/freight-audience.svg"
+    },
+
+    "testimonials": [
+      {
+        "quote": "eRoyal FREIGHT simplified our documentation process and significantly improved shipment visibility across our operations.",
+        "name": "R. Srinivasan",
+        "title": "Director, Global Freight Solutions"
+      },
+      {
+        "quote": "The automated reports and AI-powered document generation have reduced manual work and improved our team's productivity.",
+        "name": "V. Kumar",
+        "title": "Operations Manager, Ocean Link Logistics"
+      }
+    ],
+
+    "cta": {
+      "heading": "Ready to Modernize Your Freight Operations?",
+      "description": "Discover how eRoyal FREIGHT helps freight forwarders simplify documentation, automate workflows, and improve shipment visibility with one secure cloud-based platform.",
+
+      "primaryCta": {
+        "text": "Request a Demo",
+        "href": "/contact"
+      },
+
+      "secondaryCta": {
+        "text": "Contact Sales",
+        "href": "/contact"
+      }
+    }
+  },
+  {
+    "id": "accounts",
+    "slug": "accounts",
+    "aliases": ["eroyal-accounts", "logistics-accounting"],
+    "name": "eRoyal ACCOUNTS",
+    "titlePrefix": "eRoyal",
+    "titleHighlight": "ACCOUNTS",
+    "tagline": "Smart Accounting for Logistics & Trade Businesses",
+    "shortDescription": "Manage accounting, invoicing, financial reporting, and business transactions with an integrated platform designed for customs brokers, freight forwarders, and logistics companies.",
+    "logo": "/home/product-logo/accounts.svg",
+    "mockupImage": "/products/accounts-mockup.png",
+
+    "banner": {
+      "titlePrefix": "eRoyal",
+      "titleHighlight": "ACCOUNTS",
+      "highlightColor": "#28A745",
+      "tagline": "Smart Accounting for Logistics & Trade Businesses",
+      "description": "Simplify financial operations with integrated accounting, invoicing, reporting, and transaction management built specifically for the logistics and customs industry.",
+      "highlights": [
+        "24/7 Expert Technical Support",
+        "Real-Time Financial Reports",
+        "Secure Cloud-Based Platform"
+      ],
+      "primaryCta": {
+        "text": "Request a Demo",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "text": "Explore Our Solutions",
+        "href": "/products"
+      },
+      "mockupBadge": {
+        "title": "E-ACCOUNTS",
+        "subtitle": "Accounting & Financial Management"
+      },
+      "mockupImage": "/products/dashboard-mockup.png"
+    },
+
+    "features": {
+      "badge": "Core Capabilities",
+      "heading": "Everything You Need to Manage Business Finances",
+      "description": "Powerful accounting tools designed to simplify financial operations, improve visibility, and support business growth.",
+
+      "items": [
+        {
+          "title": "Integrated Accounting",
+          "badge": "Accounting Management",
+          "description": "Manage receipts, payments, journals, ledgers, and day-to-day accounting operations through one centralized platform.",
+          "icon": "/products/icons/calculator.svg"
+        },
+        {
+          "title": "Billing & Invoice Management",
+          "badge": "Smart Billing",
+          "description": "Generate customer invoices, payment records, and financial documents quickly while maintaining complete transaction history.",
+          "icon": "/products/icons/file-text.svg"
+        },
+        {
+          "title": "Real-Time Financial Reports",
+          "badge": "Business Insights",
+          "description": "Monitor financial performance with instant reports, account summaries, and business analytics for better decision-making.",
+          "icon": "/products/icons/activity.svg"
+        }
+      ]
+    },
+
+    "counter": {
+      "target": 50000,
+      "suffix": "+",
+      "description": "Helping logistics businesses simplify accounting, financial reporting, and day-to-day business transactions."
+    },
+
+    "targetAudience": {
+      "badge": "Who We Serve",
+      "headingPrefix": "Built for Businesses That Need",
+      "headingHighlight": "Smarter Financial Management",
+      "description": "Whether you're managing accounting, invoicing, or financial reporting, eRoyal ACCOUNTS helps businesses streamline finance operations through one secure, cloud-based platform built for the logistics and trade industry.",
+      "trustedByText": "Trusted by",
+
+      "audiences": [
+        {
+          "title": "Customs\nBrokers",
+          "icon": "users"
+        },
+        {
+          "title": "Freight\nForwarders",
+          "icon": "truck"
+        },
+        {
+          "title": "Logistics\nCompanies",
+          "icon": "box"
+        },
+        {
+          "title": "Trading\nCompanies",
+          "icon": "briefcase"
+        },
+        {
+          "title": "Importers &\nExporters",
+          "icon": "globe"
+        },
+        {
+          "title": "Finance\nTeams",
+          "icon": "calculator"
+        }
+      ],
+
+      "image": "/products/accounts-audience.svg"
+    },
+
+    "testimonials": [
+      {
+        "quote": "eRoyal ACCOUNTS helped us centralize our accounting operations and generate financial reports much faster than before.",
+        "name": "M. Ramesh",
+        "title": "Finance Manager, South Coast Logistics"
+      },
+      {
+        "quote": "The integrated billing and accounting features reduced duplicate work and gave our finance team better visibility into business performance.",
+        "name": "A. Vinoth",
+        "title": "Accounts Head, Gateway Freight Services"
+      }
+    ],
+
+    "cta": {
+      "heading": "Ready to Simplify Your Business Accounting?",
+      "description": "Discover how eRoyal ACCOUNTS helps logistics and trade businesses manage accounting, invoicing, and financial reporting through one secure cloud-based platform.",
+
+      "primaryCta": {
+        "text": "Request a Demo",
+        "href": "/contact"
+      },
+
+      "secondaryCta": {
+        "text": "Contact Sales",
+        "href": "/contact"
+      }
+    }
+  },
+  {
+    "id": "scm",
+    "slug": "scm",
+    "aliases": ["eroyal-scm", "scmtr-filing"],
+    "name": "eRoyal SCM",
+    "titlePrefix": "eRoyal",
+    "titleHighlight": "SCM",
+    "tagline": "Smart SCMTR Filing for Connected Supply Chains",
+    "shortDescription": "Simplify SCMTR filing and connect shipping lines, sea agents, custodians, terminal operators, and freight forwarders through one secure cloud-based platform.",
+    "logo": "/home/product-logo/scm.svg",
+    "mockupImage": "/products/scm-mockup.png",
+
+    "banner": {
+      "titlePrefix": "eRoyal",
+      "titleHighlight": "SCM",
+      "highlightColor": "#0099E5",
+      "tagline": "Smart SCMTR Filing for Connected Supply Chains",
+      "description": "Streamline SCMTR filing, simplify stakeholder collaboration, and integrate seamlessly with shipping lines using one intelligent digital platform.",
+      "highlights": [
+        "24/7 Expert Technical Support",
+        "Regular Compliance & Software Updates",
+        "Cloud-Based Platform"
+      ],
+      "primaryCta": {
+        "text": "Request a Demo",
+        "href": "/contact"
+      },
+      "secondaryCta": {
+        "text": "Explore Our Solutions",
+        "href": "/products"
+      },
+      "mockupBadge": {
+        "title": "E-SCM",
+        "subtitle": "SCMTR Filing & Supply Chain Platform"
+      },
+      "mockupImage": "/products/dashboard-mockup.png"
+    },
+
+    "features": {
+      "badge": "Core Capabilities",
+      "heading": "Everything You Need for Seamless SCMTR Filing",
+      "description": "Powerful tools designed to simplify SCMTR filing, improve stakeholder collaboration, and streamline supply chain operations.",
+
+      "items": [
+        {
+          "title": "Comprehensive SCMTR Filing",
+          "badge": "SCMTR Filing",
+          "description": "Simplify SCMTR filing by securely connecting carriers, shipping lines, sea agents, custodians, and terminal operators through one centralized platform.",
+          "icon": "/products/icons/shield.svg"
+        },
+        {
+          "title": "Seamless Shipping Line Integration",
+          "badge": "Integrated Workflows",
+          "description": "Exchange shipping information efficiently through seamless integration with shipping lines and freight forwarders.",
+          "icon": "/products/icons/link.svg"
+        },
+        {
+          "title": "Real-Time Regulatory Updates",
+          "badge": "Compliance Ready",
+          "description": "Stay aligned with the latest SCMTR regulations through automatic system updates and real-time compliance support.",
+          "icon": "/products/icons/activity.svg"
+        }
+      ]
+    },
+
+    "counter": {
+      "target": 100000,
+      "suffix": "+",
+      "description": "Helping logistics businesses simplify SCMTR filing and improve supply chain collaboration."
+    },
+
+    "targetAudience": {
+      "badge": "Who We Serve",
+      "headingPrefix": "Built for Businesses That Keep",
+      "headingHighlight": "Supply Chains Connected",
+      "description": "Whether you're managing SCMTR filing, coordinating shipping operations, or connecting multiple logistics stakeholders, eRoyal SCM provides a smarter way to simplify compliance, improve collaboration, and streamline supply chain workflows through one secure cloud-based platform.",
+      "trustedByText": "Trusted by",
+
+      "audiences": [
+        {
+          "title": "Shipping\nLines",
+          "icon": "ship"
+        },
+        {
+          "title": "Sea\nAgents",
+          "icon": "anchor"
+        },
+        {
+          "title": "Terminal\nOperators",
+          "icon": "box"
+        },
+        {
+          "title": "Custodians",
+          "icon": "shield"
+        },
+        {
+          "title": "Freight\nForwarders",
+          "icon": "truck"
+        },
+        {
+          "title": "Logistics\nProviders",
+          "icon": "globe"
+        }
+      ],
+
+      "image": "/products/scm-audience.svg"
+    },
+
+    "testimonials": [
+      {
+        "quote": "eRoyal SCM simplified our SCMTR filing process while improving collaboration between our shipping partners and terminal operators.",
+        "name": "S. Prakash",
+        "title": "Operations Head, Ocean Gateway Logistics"
+      },
+      {
+        "quote": "The seamless integration with shipping lines has significantly reduced manual coordination and improved operational efficiency.",
+        "name": "N. Balaji",
+        "title": "Supply Chain Manager, Marine Logistics India"
+      }
+    ],
+
+    "cta": {
+      "heading": "Ready to Simplify SCMTR Filing?",
+      "description": "Discover how eRoyal SCM helps logistics businesses streamline SCMTR filing, improve stakeholder collaboration, and stay compliant through one secure cloud-based platform.",
+
+      "primaryCta": {
+        "text": "Request a Demo",
+        "href": "/contact"
+      },
+
+      "secondaryCta": {
+        "text": "Contact Sales",
+        "href": "/contact"
+      }
+    }
+  }
+]

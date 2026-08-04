@@ -1,18 +1,27 @@
 import React from "react";
 import Image from "next/image";
 
-const LogoCarousel = () => {
-  // We have 21 logos from logo1.png to logo21.png
-  const logos = Array.from(
-    { length: 21 },
-    (_, i) => `/home/logos/logo${i + 1}.png`,
-  );
+interface LogoCarouselProps {
+  title?: string;
+  logos?: string[];
+}
+
+const defaultLogos = Array.from(
+  { length: 21 },
+  (_, i) => `/home/logos/logo${i + 1}.png`
+);
+
+const LogoCarousel = ({
+  title = "TRUSTED BY LEADING LOGISTICS COMPANIES",
+  logos = defaultLogos,
+}: LogoCarouselProps) => {
+  const displayLogos = logos && logos.length > 0 ? logos : defaultLogos;
 
   return (
     <section className="py-16 bg-white overflow-hidden border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-        <p className="text-center text-base font-normal text-[#333333]">
-          TRUSTED BY LEADING LOGISTICS COMPANIES
+        <p className="text-center text-base font-normal text-[#333333] tracking-wider">
+          {title}
         </p>
       </div>
 
@@ -24,7 +33,7 @@ const LogoCarousel = () => {
         */}
         <div className="flex w-max animate-marquee space-x-12 px-6">
           {/* First set of logos */}
-          {logos.map((logo, index) => (
+          {displayLogos.map((logo, index) => (
             <div
               key={`logo-1-${index}`}
               className="flex-shrink-0 w-32 md:w-40 lg:w-48 h-24 relative flex items-center justify-center grayscale-100"
@@ -39,7 +48,7 @@ const LogoCarousel = () => {
             </div>
           ))}
           {/* Second set of logos (duplicate for infinite scroll) */}
-          {logos.map((logo, index) => (
+          {displayLogos.map((logo, index) => (
             <div
               key={`logo-2-${index}`}
               className="flex-shrink-0 w-32 md:w-40 lg:w-48 h-24 relative flex items-center justify-center"

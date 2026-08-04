@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 800" width="700" height="800" fill="none">
+  <defs>
+    <linearGradient id="audFrtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B"/>
+      <stop offset="50%" stop-color="#312E81"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="800" fill="url(#audFrtBg)"/>
+  
+  <!-- Multi-modal Network Lines -->
+  <g opacity="0.2" stroke="#A5B4FC" stroke-width="2">
+    <circle cx="350" cy="400" r="220" stroke-dasharray="8 6"/>
+    <circle cx="350" cy="400" r="140" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Central Badge -->
+  <g transform="translate(350, 400)">
+    <circle cx="0" cy="0" r="120" fill="#0F172A" stroke="#818CF8" stroke-width="4"/>
+    <path d="M-40 0h80M0 -40v80" stroke="#818CF8" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="30" fill="#4F46E5"/>
+    <text x="0" y="55" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="1.5">MULTI-MODAL ERP</text>
+    <text x="0" y="75" text-anchor="middle" fill="#C7D2FE" font-family="system-ui, sans-serif" font-size="12">SEA • AIR • LAND • RAIL</text>
+  </g>
+
+  <g transform="translate(80, 160)">
+    <rect width="250" height="70" rx="14" fill="#0F172A" fill-opacity="0.9" stroke="#818CF8" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#C7D2FE" font-family="system-ui, sans-serif" font-size="12">Global Freight Network</text>
+    <text x="20" y="54" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="20" font-weight="700">350,000+ Shipments</text>
+  </g>
+
+  <g transform="translate(370, 620)">
+    <rect width="250" height="70" rx="14" fill="#0F172A" fill-opacity="0.9" stroke="#34D399" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#C7D2FE" font-family="system-ui, sans-serif" font-size="12">Operational Efficiency</text>
+    <text x="20" y="54" fill="#34D399" font-family="system-ui, sans-serif" font-size="20" font-weight="700">20+ Hours Saved/Wk</text>
+  </g>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" fill="none">
+  <defs>
+    <linearGradient id="nvcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021B2B"/>
+      <stop offset="100%" stop-color="#082F49"/>
+    </linearGradient>
+    <linearGradient id="nvcAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <filter id="nvcdrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#nvcdrop)">
+    <!-- Main Window Frame -->
+    <rect x="40" y="40" width="720" height="520" rx="16" fill="url(#nvcBg)" stroke="#0E7490" stroke-width="2"/>
+    
+    <!-- Top Window Bar -->
+    <rect x="40" y="40" width="720" height="46" rx="16" fill="#0C4A6E"/>
+    <circle cx="70" cy="63" r="6" fill="#EF4444"/>
+    <circle cx="90" cy="63" r="6" fill="#F59E0B"/>
+    <circle cx="110" cy="63" r="6" fill="#10B981"/>
+    <rect x="250" y="51" width="300" height="24" rx="6" fill="#021B2B" stroke="#0E7490" stroke-width="1"/>
+    <text x="315" y="67" fill="#7DD3FC" font-family="system-ui, sans-serif" font-size="12" font-weight="500">app.eroyaltech.com/nvocc/containers</text>
+    
+    <!-- Sidebar -->
+    <rect x="40" y="86" width="160" height="474" fill="#021B2B"/>
+    <rect x="56" y="110" width="128" height="32" rx="8" fill="url(#nvcAccent)"/>
+    <text x="74" y="131" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="700">📦 Container Fleet</text>
+    <text x="74" y="175" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">🚢 Vessel Voyages</text>
+    <text x="74" y="215" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">⏳ Detention / Demurrage</text>
+    <text x="74" y="255" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">📑 MBL / HBL Release</text>
+    <text x="74" y="295" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="13" font-weight="500">🏢 Port Agency ERP</text>
+
+    <!-- Main Content Area -->
+    <g transform="translate(220, 106)">
+      <rect x="0" y="0" width="150" height="84" rx="10" fill="#075985" stroke="#0284C7" stroke-width="1"/>
+      <text x="16" y="28" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">Total Fleet TEUs</text>
+      <text x="16" y="60" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="700">28,450</text>
+      <text x="105" y="60" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Active</text>
+
+      <rect x="170" y="0" width="150" height="84" rx="10" fill="#075985" stroke="#0284C7" stroke-width="1"/>
+      <text x="186" y="28" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">On-Hire Utilization</text>
+      <text x="186" y="60" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="24" font-weight="700">94.2%</text>
+      <text x="270" y="60" fill="#10B981" font-family="system-ui, sans-serif" font-size="12" font-weight="600">High</text>
+
+      <rect x="340" y="0" width="170" height="84" rx="10" fill="#075985" stroke="#0284C7" stroke-width="1"/>
+      <text x="356" y="28" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="12">Detention Recovered</text>
+      <text x="356" y="60" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="24" font-weight="700">$184.2K</text>
+    </g>
+
+    <!-- Container Inventory Matrix -->
+    <g transform="translate(220, 210)">
+      <rect x="0" y="0" width="510" height="320" rx="12" fill="#075985" stroke="#0284C7" stroke-width="1"/>
+      <text x="20" y="32" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Container Inventory &amp; Gate Movement Telematics</text>
+      
+      <line x1="20" y1="52" x2="490" y2="52" stroke="#0284C7"/>
+
+      <!-- Row 1 -->
+      <text x="20" y="85" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="600">MSKU 782910-4</text>
+      <text x="20" y="105" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">40' High Cube • DRY</text>
+      <text x="160" y="85" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13">JNPT Nhava Sheva Depot</text>
+      <text x="160" y="105" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">Gate-In Empty (Ready)</text>
+      <rect x="330" y="74" width="80" height="22" rx="6" fill="#065F46"/>
+      <text x="348" y="89" fill="#34D399" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Available</text>
+      <text x="435" y="89" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13">0 Free D</text>
+
+      <line x1="20" y1="125" x2="490" y2="125" stroke="#0284C7"/>
+
+      <!-- Row 2 -->
+      <text x="20" y="155" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="600">TGHU 339012-8</text>
+      <text x="20" y="175" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">20' Standard GP</text>
+      <text x="160" y="155" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13">Chennai Port CFS</text>
+      <text x="160" y="175" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">With Consignee • Day 9/7</text>
+      <rect x="330" y="144" width="80" height="22" rx="6" fill="#7F1D1D"/>
+      <text x="340" y="159" fill="#FCA5A5" font-family="system-ui, sans-serif" font-size="11" font-weight="600">Detention 2D</text>
+      <text x="435" y="159" fill="#F87171" font-family="system-ui, sans-serif" font-size="13" font-weight="700">+$160</text>
+
+      <line x1="20" y1="195" x2="490" y2="195" stroke="#0284C7"/>
+
+      <!-- Row 3 -->
+      <text x="20" y="225" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13" font-weight="600">CMAU 564319-0</text>
+      <text x="20" y="245" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">40' Reefer Container</text>
+      <text x="160" y="225" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13">Voyage: BL-SING-042</text>
+      <text x="160" y="245" fill="#BAE6FD" font-family="system-ui, sans-serif" font-size="11">On-Board VSL Evergreen</text>
+      <rect x="330" y="214" width="80" height="22" rx="6" fill="#1E3A8A"/>
+      <text x="345" y="229" fill="#93C5FD" font-family="system-ui, sans-serif" font-size="11" font-weight="600">On Water</text>
+      <text x="435" y="229" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="13">ETA 2d</text>
+
+      <!-- Bottom Status Pill -->
+      <rect x="20" y="275" width="470" height="30" rx="8" fill="#021B2B"/>
+      <text x="35" y="295" fill="#38BDF8" font-family="system-ui, sans-serif" font-size="12">⚡ Live CODECO &amp; COARRI depot feeds active for 42 international ports</text>
+    </g>
+  </g>
+</svg>

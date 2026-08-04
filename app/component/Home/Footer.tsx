@@ -42,7 +42,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/products"
                   className="hover:text-[#006CB8] transition-colors"
                 >
                   Products

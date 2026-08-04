@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="scmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="6" width="48" height="48" rx="12" fill="url(#scmGrad)"/>
+  <path d="M16 22l10-5 10 5v14l-10 5-10-5V22z" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+  <path d="M26 17v24M16 22l10 6 10-6" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <text x="60" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#111827">eRoyal</text>
+  <text x="140" y="34" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#0284C7">SCM</text>
+  <text x="60" y="48" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="600" fill="#6B7280" letter-spacing="1.5">SUPPLY CHAIN &amp; WAREHOUSE</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 800" width="700" height="800" fill="none">
+  <defs>
+    <linearGradient id="audImpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002D52"/>
+      <stop offset="60%" stop-color="#001B3A"/>
+      <stop offset="100%" stop-color="#000F24"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="700" height="800" fill="url(#audImpBg)"/>
+  
+  <!-- Subtle Blueprint Grid Pattern -->
+  <g opacity="0.15" stroke="#38BDF8" stroke-width="1">
+    <path d="M0 80h700M0 160h700M0 240h700M0 320h700M0 400h700M0 480h700M0 560h700M0 640h700M0 720h700"/>
+    <path d="M80 0v800M160 0v800M240 0v800M320 0v800M400 0v800M480 0v800M560 0v800M640 0v800"/>
+  </g>
+
+  <!-- Orbital Ring Trails -->
+  <g opacity="0.35" stroke-width="2">
+    <circle cx="400" cy="400" r="240" stroke="#38BDF8" stroke-dasharray="8 8"/>
+    <circle cx="400" cy="400" r="180" stroke="#FFB800" stroke-dasharray="12 6" opacity="0.6"/>
+  </g>
+
+  <!-- Customs Clearance Seal / Badge -->
+  <g transform="translate(400, 390)">
+    <!-- Outer Glow & Gold Ring -->
+    <circle cx="0" cy="0" r="130" fill="#001B3A" stroke="#FFB800" stroke-width="6"/>
+    <!-- Inner dashed cyan ring -->
+    <circle cx="0" cy="0" r="112" fill="none" stroke="#00D2FF" stroke-width="2.5" stroke-dasharray="8 6"/>
+    
+    <!-- Big Green Glowing Checkmark -->
+    <path d="M-36 -10 L-8 22 L44 -36" stroke="#00E676" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glow)"/>
+    
+    <!-- Text Labels -->
+    <text x="0" y="62" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="800" letter-spacing="2">ICEGATE CERTIFIED</text>
+    <text x="0" y="84" text-anchor="middle" fill="#7DD3FC" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" letter-spacing="1.5">CUSTOMS AUTOMATION</text>
+  </g>
+
+  <!-- Top-left Floating Chip: Direct Port Filing -->
+  <g transform="translate(180, 160)">
+    <rect width="250" height="74" rx="16" fill="#00152B" fill-opacity="0.9" stroke="#00D2FF" stroke-width="1.5"/>
+    <text x="22" y="32" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Direct Port Filing</text>
+    <text x="22" y="56" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="17" font-weight="700">100% ICEGATE Compliant</text>
+  </g>
+
+  <!-- Bottom-right Floating Chip: Faster Turnaround -->
+  <g transform="translate(370, 590)">
+    <rect width="270" height="74" rx="16" fill="#00152B" fill-opacity="0.9" stroke="#FFB800" stroke-width="2"/>
+    <text x="22" y="32" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Customs Brokers &amp; CHAs</text>
+    <text x="22" y="56" fill="#FFB800" font-family="system-ui, sans-serif" font-size="18" font-weight="700">60% Faster Turnaround</text>
+  </g>
+</svg>

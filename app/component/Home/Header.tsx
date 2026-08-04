@@ -1,8 +1,24 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+  const pathname = usePathname();
+
+  const isHomeActive = pathname === "/";
+  const isAboutActive = pathname === "/about";
+  const isProductsActive = pathname.startsWith("/products");
+  const isCareerActive = pathname === "/career" || pathname === "/careers";
+  const isEventsActive = pathname === "/events";
+
+  const getLinkClass = (active: boolean) =>
+    active
+      ? "text-[#006CB8] font-semibold border-b-2 border-[#006CB8] py-1"
+      : "text-[#333333] hover:text-[#006CB8] font-medium transition-colors py-1";
+
   return (
     <header className="bg-[#f8fafc] sm:bg-white w-full border-b border-slate-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,24 +31,68 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 lg:space-x-12 items-center">
-            <Link href="/" className="text-[#006CB8] font-semibold border-b-2 border-[#006CB8] py-1">
+            <Link href="/" className={getLinkClass(isHomeActive)}>
               Home
             </Link>
-            <Link href="/about" className="text-[#333333] hover:text-[#006CB8] font-medium transition-colors">
+            <Link href="/about" className={getLinkClass(isAboutActive)}>
               About us
             </Link>
-            <div className="relative group cursor-pointer">
-              <div className="flex items-center text-[#333333] hover:text-[#006CB8] font-medium transition-colors">
+            <div className="relative group cursor-pointer py-2">
+              <Link href="/products" className={`flex items-center ${isProductsActive ? "text-[#006CB8] font-semibold border-b-2 border-[#006CB8] py-1" : "text-[#333333] group-hover:text-[#006CB8] font-medium transition-colors py-1"}`}>
                 Products
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 ml-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                 </svg>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute top-full left-0 w-64 bg-white rounded-2xl shadow-xl border border-slate-100 py-3 px-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
+                <Link
+                  href="/products/impex"
+                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/impex" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
+                >
+                  eRoyal IMPEX
+                  <span className="block text-xs font-normal text-gray-500">Customs &amp; ICEGATE Filing</span>
+                </Link>
+                <Link
+                  href="/products/scm"
+                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/scm" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
+                >
+                  eRoyal SCM
+                  <span className="block text-xs font-normal text-gray-500">Supply Chain &amp; Warehouse</span>
+                </Link>
+                <Link
+                  href="/products/icon"
+                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/icon" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
+                >
+                  eRoyal ICON
+                  <span className="block text-xs font-normal text-gray-500">Console Manifest Filing</span>
+                </Link>
+                <Link
+                  href="/products/freight"
+                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/freight" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
+                >
+                  eRoyal FREIGHT
+                  <span className="block text-xs font-normal text-gray-500">Freight Forwarding ERP</span>
+                </Link>
+                <Link
+                  href="/products/nvocc"
+                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/nvocc" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
+                >
+                  eRoyal NVOCC
+                  <span className="block text-xs font-normal text-gray-500">Liner &amp; Container Platform</span>
+                </Link>
+                <div className="border-t border-slate-100 my-1 pt-1">
+                  <Link href="/products" className="block px-4 py-2 text-xs font-bold text-[#006CB8] hover:underline">
+                    View All Products &rarr;
+                  </Link>
+                </div>
               </div>
             </div>
-            <Link href="/career" className="text-[#333333] hover:text-[#006CB8] font-medium transition-colors">
+            <Link href="/career" className={getLinkClass(isCareerActive)}>
               Careers
             </Link>
-            <Link href="#" className="text-[#333333] hover:text-[#006CB8] font-medium transition-colors">
+            <Link href="/events" className={getLinkClass(isEventsActive)}>
               Events
             </Link>
           </nav>
