@@ -70,93 +70,86 @@ const ProductBanner = ({ banner, product }: ProductBannerProps) => {
   const productLogo = product?.logo;
 
   return (
-    <section className="relative w-full py-16 md:py-24 overflow-hidden bg-gradient-to-r from-white via-blue-50/30 to-blue-50/60">
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
-          {/* Left Content */}
-          <div className="w-full lg:w-1/2 space-y-6">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight">
-              <span className="text-black">{titlePrefix}</span>{" "}
-              <span style={{ color: highlightColor }}>{titleHighlight}</span>
-            </h1>
+    <section className="relative w-full overflow-hidden bg-gradient-to-r from-white via-blue-50/30 to-blue-50/60 flex flex-col items-center">
+      {/* Content Section */}
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center py-10 md:py-14">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight mb-3 md:mb-4">
+          <span className="text-black">{titlePrefix}</span>{" "}
+          <span style={{ color: highlightColor }}>{titleHighlight}</span>
+        </h1>
 
-            <h2 className="text-xl md:text-2xl font-medium text-gray-900 mt-2">
-              {tagline}
-            </h2>
+        <h2 className="text-lg md:text-2xl font-medium text-gray-900 mb-4 md:mb-6">
+          {tagline}
+        </h2>
 
-            <p className="text-gray-600 text-base md:text-lg max-w-xl leading-relaxed mt-4">
-              {description}
-            </p>
+        <p className="text-gray-600 text-sm md:text-lg max-w-3xl leading-relaxed mb-6 md:mb-8">
+          {description}
+        </p>
 
-            {highlights && highlights.length > 0 && (
-              <div className="grid grid-cols-3 gap-3 md:gap-4 pt-4 max-w-2xl w-full">
-                {highlights.map((highlight, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-center p-3 md:p-3.5 rounded-2xl bg-gradient-to-br from-[#E3F1FE] via-[#ECF5FE] to-[#F9FCFF] shadow-[0_0px_4px_0px_rgba(0,0,0,0.10)] hover:shadow-md transition-shadow text-center"
-                  >
-                    <span className="text-xs md:text-sm font-semibold text-[#1E293B] leading-snug">
-                      {highlight}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            <div className="flex flex-wrap items-center gap-4 pt-6">
-              <Link
-                href={primaryCta.href}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#0066B3] text-white font-medium hover:bg-blue-700 transition-all shadow-md hover:shadow-lg"
-              >
-                {primaryCta.text}
-              </Link>
-              <Link
-                href={secondaryCta.href}
-                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white text-[#0066B3] font-medium border border-[#0066B3] hover:bg-blue-50 transition-all shadow-sm"
-              >
-                {secondaryCta.text}
-              </Link>
-            </div>
-          </div>
-
-          {/* Right Content */}
-          <div className="w-full lg:w-1/2 flex flex-col items-center justify-center pt-8 lg:pt-0">
-            {mockupBadge && (
-              <div className="mb-4 text-center">
-                <h3
-                  className="text-3xl md:text-4xl font-bold uppercase tracking-wide"
-                  style={{
-                    color:
-                      highlightColor === "#FFB800" ? "#0066B3" : highlightColor,
-                  }}
-                >
-                  {mockupBadge.title}
-                </h3>
-                <p className="text-gray-600 font-medium text-lg mt-1">
-                  {mockupBadge.subtitle}
-                </p>
-              </div>
-            )}
-
-            <div className="relative w-full max-w-162.5 aspect-4/3 flex items-center justify-center">
-              {/* Blurred Sphere Glow with #016CB8 */}
+        {highlights && highlights.length > 0 && (
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-6 md:mb-8 max-w-3xl w-full">
+            {highlights.map((highlight, index) => (
               <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] md:w-[300px] md:h-[300px] rounded-full -z-10 pointer-events-none opacity-50"
-                style={{
-                  backgroundColor: "#016CB8",
-                  filter: "blur(70px)",
-                }}
-              />
-              <Image
-                src={mockupImage}
-                alt={`${titlePrefix} ${titleHighlight} Mockup`}
-                fill
-                className="object-contain drop-shadow-2xl"
-                priority
-              />
-            </div>
+                key={index}
+                className="flex items-center justify-center p-2.5 md:p-3.5 rounded-2xl bg-gradient-to-br from-[#E3F1FE] via-[#ECF5FE] to-[#F9FCFF] shadow-[0_0px_4px_0px_rgba(0,0,0,0.10)] hover:shadow-md transition-shadow text-center flex-1 min-w-[180px] md:min-w-[200px]"
+              >
+              <span className="text-[11px] md:text-sm font-semibold text-[#1E293B] leading-snug">
+                  {(() => {
+                    const isCenter = index === Math.floor(highlights.length / 2);
+                    if (isCenter) {
+                      const words = highlight.split(" ");
+                      if (words.length > 2) {
+                        const mid = Math.ceil(words.length / 2);
+                        return (
+                          <>
+                            {words.slice(0, mid).join(" ")}
+                            <br />
+                            {words.slice(mid).join(" ")}
+                          </>
+                        );
+                      }
+                    }
+                    return highlight;
+                  })()}
+                </span>
+              </div>
+            ))}
           </div>
+        )}
+
+        <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+          <Link
+            href={primaryCta.href}
+            className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-[#0066B3] text-white font-medium hover:bg-blue-700 transition-all shadow-md hover:shadow-lg text-sm md:text-base"
+          >
+            {primaryCta.text}
+          </Link>
+          <Link
+            href={secondaryCta.href}
+            className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-3.5 rounded-full bg-white text-[#0066B3] font-medium border border-[#0066B3] hover:bg-blue-50 transition-all shadow-sm text-sm md:text-base"
+          >
+            {secondaryCta.text}
+          </Link>
         </div>
+      </div>
+
+      {/* Dashboard Image Section (At original large size) */}
+      <div className="relative z-0 w-full max-w-5xl lg:max-w-6xl aspect-[4/3] md:aspect-[16/9] flex items-center justify-center mb-16 md:mb-24">
+        {/* Blurred Sphere Glow with #016CB8 */}
+        <div
+          className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[1000px] md:h-[700px] rounded-full -z-10 pointer-events-none opacity-50"
+          style={{
+            backgroundColor: "#016CB8",
+            filter: "blur(70px)",
+          }}
+        />
+        <Image
+          src={mockupImage}
+          alt={`${titlePrefix} ${titleHighlight} Mockup`}
+          fill
+          className="object-contain object-top drop-shadow-2xl -top-20"
+          priority
+        />
       </div>
     </section>
   );

@@ -9,6 +9,7 @@ import TargetAudienceSection from "@/app/component/products/TargetAudienceSectio
 import LogoCarousel from "@/app/component/Home/LogoCarousel";
 import Testimonial from "@/app/component/Home/Testimonial";
 import CTASection from "@/app/component/products/CTASection";
+import AIFeatureSection from "@/app/component/products/AIFeatureSection";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -77,6 +78,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <div className="relative z-10">
         </div>
       </div> */}
+      {(slug === "impex" || slug === "freight") && <AIFeatureSection />}
       <LogoCarousel {...(product.logoCarousel || {})} />
       <Testimonial testimonials={product.testimonials} />
       <CTASection cta={product.cta} />

@@ -29,7 +29,7 @@ const SEZSection: React.FC<SEZSectionProps> = ({ sez }) => {
       return (
         <>
           <span className="block">Special Economic Zone (SEZ)</span>
-          <span className="block text-[#0066B3]">Customs Filing</span>
+          <span className="block text-[#60CFFF]">Customs Filing</span>
         </>
       );
     }
@@ -41,7 +41,7 @@ const SEZSection: React.FC<SEZSectionProps> = ({ sez }) => {
       return (
         <>
           <span className="block">{firstHalf}</span>
-          <span className="block text-[#0066B3]">{secondHalf}</span>
+          <span className="block text-[#60CFFF]">{secondHalf}</span>
         </>
       );
     }
@@ -50,83 +50,19 @@ const SEZSection: React.FC<SEZSectionProps> = ({ sez }) => {
 
   return (
     <section id="sez-section" className="w-full">
-      {/* Top Hero Section with Blue Aurora Gradient */}
-      <div
-        className="relative w-full py-16 sm:py-20 lg:py-24 overflow-hidden bg-white"
-        style={{
-          background: `
-            radial-gradient(ellipse 70% 90% at 0% 50%, rgba(0, 102, 179, 0.28) 0%, rgba(96, 165, 250, 0.18) 45%, rgba(239, 246, 255, 0.05) 75%, transparent 100%),
-            radial-gradient(ellipse 70% 90% at 100% 50%, rgba(0, 102, 179, 0.28) 0%, rgba(96, 165, 250, 0.18) 45%, rgba(239, 246, 255, 0.05) 75%, transparent 100%),
-            radial-gradient(ellipse 80% 50% at 50% 100%, rgba(224, 242, 254, 0.35) 0%, transparent 80%),
-            linear-gradient(180deg, #FFFFFF 0%, #F5F9FE 50%, #FFFFFF 100%)
-          `,
-        }}
-      >
-        {/* Aurora Ambient Light Pillars & Dotted Grid Texture with Bottom Fade */}
-        <div
-          className="absolute inset-0 pointer-events-none -z-10 overflow-hidden"
-          style={{
-            maskImage:
-              "linear-gradient(180deg, black 0%, black 60%, transparent 95%)",
-            WebkitMaskImage:
-              "linear-gradient(180deg, black 0%, black 60%, transparent 95%)",
-          }}
-        >
-          {/* Left Aurora Glow Beam */}
-          <div
-            className="absolute -top-1/4 -left-1/4 w-[75%] h-[150%] rounded-full opacity-65 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, rgba(0, 102, 179, 0.45) 0%, rgba(96, 165, 250, 0.28) 45%, transparent 75%)",
-              filter: "blur(110px)",
-            }}
-          />
-
-          {/* Right Aurora Glow Beam */}
-          <div
-            className="absolute -top-1/4 -right-1/4 w-[75%] h-[150%] rounded-full opacity-65 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, rgba(0, 102, 179, 0.45) 0%, rgba(96, 165, 250, 0.28) 45%, transparent 75%)",
-              filter: "blur(110px)",
-            }}
-          />
-
-          {/* Center Soft Ice Blue Top Glow */}
-          <div
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[320px] rounded-full opacity-50 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse at center, rgba(186, 230, 253, 0.65) 0%, transparent 70%)",
-              filter: "blur(85px)",
-            }}
-          />
-
-          {/* Fine Dotted Matrix Grid (matching reference image) */}
-          <div
-            className="absolute inset-0 opacity-[0.25] pointer-events-none"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, #0066B3 1.2px, transparent 1.2px)",
-              backgroundSize: "22px 22px",
-              maskImage:
-                "radial-gradient(ellipse 90% 70% at 50% 50%, transparent 20%, black 85%)",
-              WebkitMaskImage:
-                "radial-gradient(ellipse 90% 70% at 50% 50%, transparent 20%, black 85%)",
-            }}
-          />
-        </div>
-
-        {/* Smooth Bottom Feathering Overlay */}
-        <div className="absolute bottom-0 inset-x-0 h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none z-0" />
-
+      {/* Top Hero Section */}
+      <div className="relative w-full py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-br from-[#0A2A5E] via-[#0D3B7A] to-[#1565C0] animate-gradient-shift">
+        {/* Decorative animated gradient orbs */}
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-[#1E88E5]/30 blur-[120px] animate-float pointer-events-none" />
+        <div className="absolute bottom-[-15%] left-[-10%] w-[600px] h-[600px] rounded-full bg-[#0D47A1]/40 blur-[120px] animate-float pointer-events-none" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-[30%] left-[40%] w-[400px] h-[400px] rounded-full bg-[#42A5F5]/20 blur-[100px] animate-float pointer-events-none" style={{ animationDelay: '4s' }} />
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-10 xl:gap-14">
             {/* Left Column: Information */}
-            <div className="w-full md:w-[44%] lg:w-[40%] flex flex-col justify-center shrink-0">
+            <div className="w-full md:w-[44%] lg:w-[50%] flex flex-col justify-center shrink-0">
               {/* Pill Badge */}
               {badge && (
-                <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-200/80 text-xs sm:text-sm font-semibold text-[#0066B3] shadow-sm mb-4 w-fit backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/25 text-xs sm:text-sm font-semibold text-white shadow-sm mb-4 w-fit backdrop-blur-sm">
                   <span className="px-2 py-0.5 rounded-md bg-[#0066B3] text-white text-[10px] font-bold tracking-wider uppercase shadow-xs">
                     NEW
                   </span>
@@ -148,17 +84,34 @@ const SEZSection: React.FC<SEZSectionProps> = ({ sez }) => {
               )}
 
               {/* Heading */}
-              <h2 className="text-2xl sm:text-3xl lg:text-[2.2rem] xl:text-[2.5rem] font-bold text-[#0A192F] tracking-tight leading-[1.2]">
+              <h2 className="text-2xl sm:text-3xl lg:text-[2.2rem] xl:text-[2.5rem] font-bold text-white tracking-tight leading-[1.2]">
                 {formatHeading(heading)}
               </h2>
 
               {/* Description */}
-              <p className="text-black mt-4 sm:mt-5 text-sm sm:text-base lg:text-[1.02rem] leading-relaxed">
+              <p className="text-blue-100 mt-4 sm:mt-5 text-sm sm:text-base lg:text-[1.02rem] leading-relaxed w-11/12">
                 {description}
               </p>
 
-              {/* Checkmark Highlights from benefits */}
-              <div className="flex flex-wrap items-center gap-y-2.5 gap-x-5 sm:gap-x-6 mt-7 pt-6 border-t border-gray-200/70 text-xs sm:text-sm font-medium text-gray-600">
+              {/* Removed original benefits list */}
+            </div>
+
+            {/* Right Column: Clean Large Image */}
+            <div className="w-full md:w-[56%] lg:w-[50%] relative flex items-center justify-center mt-10 md:mt-0">
+              <div className="relative w-full transform lg:scale-105">
+                {/* Image with Drop Shadow */}
+                <div className="relative w-full drop-shadow-[0_25px_60px_rgba(0,102,179,0.2)]">
+                  <Image
+                    src={image}
+                    alt="eRoyal IMPEX SEZ Customs Filing Interface"
+                    width={1200}
+                    height={900}
+                    className="w-full h-auto rounded-[24px]"
+                    priority
+                  />
+                </div>
+
+                {/* Floating Benefit Pills */}
                 {(benefits.length > 0
                   ? benefits.slice(0, 3)
                   : [
@@ -166,27 +119,33 @@ const SEZSection: React.FC<SEZSectionProps> = ({ sez }) => {
                       "Integrated with eRoyal IMPEX customs workflows",
                       "Reduced manual documentation",
                     ]
-                ).map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <span className="w-4 h-4 rounded-full bg-blue-100 text-[#0066B3] flex items-center justify-center text-[10px] font-bold shrink-0">
-                      ✓
-                    </span>
-                    <span>{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+                ).map((benefit, index) => {
+                  const positions = [
+                    "top-[2%] left-[-2%] sm:top-[0%] sm:left-[-6%] lg:top-[-4%] lg:left-[-8%]",
+                    "top-[20%] right-[-2%] sm:top-[18%] sm:right-[-4%] lg:top-[15%] lg:right-[-5%]",
+                    "bottom-[25%] left-[-4%] sm:bottom-[22%] sm:left-[-10%] lg:bottom-[20%] lg:left-[-15%]",
+                  ];
 
-            {/* Right Column: Clean Large Image */}
-            <div className="w-full md:w-[56%] lg:w-[60%] relative flex items-center justify-center">
-              <div className="relative w-full h-[380px] sm:h-[460px] md:h-[500px] lg:h-[580px] xl:h-[640px] transform lg:scale-105 transition-transform duration-500 hover:scale-110">
-                <Image
-                  src={image}
-                  alt="eRoyal IMPEX SEZ Customs Filing Interface"
-                  fill
-                  className="object-contain drop-shadow-[0_25px_60px_rgba(0,102,179,0.2)]"
-                  priority
-                />
+                  // Split text into exactly two lines
+                  const words = benefit.split(" ");
+                  const midIndex = Math.ceil(words.length / 2);
+                  const line1 = words.slice(0, midIndex).join(" ");
+                  const line2 = words.slice(midIndex).join(" ");
+
+                  return (
+                    <div
+                      key={index}
+                      className={`absolute ${positions[index]} z-20 flex items-center justify-center p-2.5 sm:p-3 lg:px-4 lg:py-3 bg-gradient-to-br from-[#E3F1FE] via-[#ECF5FE] to-[#F9FCFF] shadow-[0_0px_4px_0px_rgba(0,0,0,0.10)] rounded-xl lg:rounded-2xl min-w-[140px] sm:min-w-[160px] lg:min-w-[200px] animate-float hover:scale-105 transition-transform duration-300`}
+                      style={{ animationDelay: `${index * 1.5}s` }}
+                    >
+                      <p className="text-[9.5px] sm:text-[10.5px] lg:text-[11.5px] font-semibold text-center leading-snug text-[#1E293B] whitespace-nowrap">
+                        {line1}
+                        <br />
+                        {line2}
+                      </p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -195,7 +154,10 @@ const SEZSection: React.FC<SEZSectionProps> = ({ sez }) => {
 
       {/* Bottom Clean Section: Specialized SEZ Capabilities Grid */}
       {features.length > 0 && (
-        <div id="sez-features-grid" className="w-full bg-white pt-6 pb-16 sm:pb-20">
+        <div
+          id="sez-features-grid"
+          className="w-full bg-white pt-6 pb-16 sm:pb-20"
+        >
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-2xl mx-auto mb-12">
               <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0066B3]">

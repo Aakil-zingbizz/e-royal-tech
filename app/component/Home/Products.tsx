@@ -5,24 +5,15 @@ import Image from "next/image";
 const products = [
   {
     id: 1,
-    title: "eROYAL SCM",
-    slug: "scm",
-    logo: "/home/product-logo/scm.svg",
+    title: "eROYAL IMPEX",
+    slug: "impex",
+    logo: "/home/product-logo/impex.svg",
     description:
-      "End-to-end supply chain platform orchestrating multi-location warehousing, automated order fulfillment, and live tracking.",
-    link: "/products/scm",
+      "Simplify Shipping Bills, Bills of Entry, and ICEGATE customs filing with a secure, cloud-based platform.",
+    link: "/products/impex",
   },
   {
     id: 2,
-    title: "eROYAL ICON",
-    slug: "icon",
-    logo: "/home/product-logo/icon.svg",
-    description:
-      "Console manifest filing software engineered for air & ocean consolidators with direct customs EDI integration.",
-    link: "/products/icon",
-  },
-  {
-    id: 3,
     title: "eROYAL FREIGHT",
     slug: "freight",
     logo: "/home/product-logo/freight.svg",
@@ -31,23 +22,23 @@ const products = [
     link: "/products/freight",
   },
   {
-    id: 4,
-    title: "eROYAL NVOCC",
-    slug: "nvocc",
-    logo: "/home/product-logo/nvocc.svg",
+    id: 3,
+    title: "eROYAL ACCOUNTS",
+    slug: "accounts",
+    logo: "/home/product-logo/accounts.svg",
     description:
-      "Complete NVOCC solution for container inventory tracking, liner agency operations, detention billing, and slot management.",
-    link: "/products/nvocc",
+      "Manage accounting, invoicing, financial reporting, and business transactions with an integrated platform.",
+    link: "/products/accounts",
   },
   {
-    id: 5,
-    title: "eROYAL IMPEX",
-    slug: "impex",
-    logo: "/home/product-logo/impex.svg",
+    id: 4,
+    title: "eROYAL SCM",
+    slug: "scm",
+    logo: "/home/product-logo/scm.svg",
     description:
-      "Simplify Shipping Bills, Bills of Entry, and ICEGATE customs filing with a secure, cloud-based platform.",
-    link: "/products/impex",
-  },
+      "End-to-end supply chain platform orchestrating multi-location warehousing, automated order fulfillment, and live tracking.",
+    link: "/products/scm",
+  }
 ];
 
 const Products = () => {
@@ -67,7 +58,7 @@ const Products = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {products.map((product) => (
             <div
               key={product.id}

@@ -6,7 +6,7 @@ import { getAllProducts } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Enterprise Logistics Software Suite | eRoyal Tech Systems",
   description:
-    "Explore our complete suite of software solutions for customs filing, freight forwarding, NVOCC liner management, and supply chain logistics.",
+    "Explore our complete suite of software solutions for customs filing, freight forwarding, trade accounting, and supply chain logistics.",
 };
 
 export default function ProductsCatalogPage() {

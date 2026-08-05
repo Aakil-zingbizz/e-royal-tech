@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="max-w-3xl">
           <div className="mb-4 text-sm font-medium tracking-wider text-[#008ff5] uppercase">
             Trusted Since 2003 &nbsp;&bull;&nbsp; Logistics-Focused
-            &nbsp;&bull;&nbsp; 6 Enterprise Solutions &nbsp;&bull;&nbsp; 24/7
+            &nbsp;&bull;&nbsp; 4 Enterprise Solutions &nbsp;&bull;&nbsp; 24/7
             support
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-6 leading-tight">
@@ -30,9 +30,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
-            Purpose-built software for customs, freight forwarding, NVOCC
-            management, AI-powered documentation, trade accounting, and
-            warehouse operations.
+            Purpose-built software for customs, freight forwarding,
+            trade accounting, supply chain logistics, and warehouse operations.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

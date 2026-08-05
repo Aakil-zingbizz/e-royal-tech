@@ -55,20 +55,6 @@ const Header = () => {
                   <span className="block text-xs font-normal text-gray-500">Customs &amp; ICEGATE Filing</span>
                 </Link>
                 <Link
-                  href="/products/scm"
-                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/scm" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
-                >
-                  eRoyal SCM
-                  <span className="block text-xs font-normal text-gray-500">Supply Chain &amp; Warehouse</span>
-                </Link>
-                <Link
-                  href="/products/icon"
-                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/icon" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
-                >
-                  eRoyal ICON
-                  <span className="block text-xs font-normal text-gray-500">Console Manifest Filing</span>
-                </Link>
-                <Link
                   href="/products/freight"
                   className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/freight" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
                 >
@@ -76,11 +62,18 @@ const Header = () => {
                   <span className="block text-xs font-normal text-gray-500">Freight Forwarding ERP</span>
                 </Link>
                 <Link
-                  href="/products/nvocc"
-                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/nvocc" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
+                  href="/products/accounts"
+                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/accounts" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
                 >
-                  eRoyal NVOCC
-                  <span className="block text-xs font-normal text-gray-500">Liner &amp; Container Platform</span>
+                  eRoyal ACCOUNTS
+                  <span className="block text-xs font-normal text-gray-500">Accounting &amp; Financial Management</span>
+                </Link>
+                <Link
+                  href="/products/scm"
+                  className={`block px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${pathname === "/products/scm" ? "bg-blue-50 text-[#006CB8]" : "text-gray-800 hover:bg-blue-50 hover:text-[#006CB8]"}`}
+                >
+                  eRoyal SCM
+                  <span className="block text-xs font-normal text-gray-500">Supply Chain &amp; Warehouse</span>
                 </Link>
                 <div className="border-t border-slate-100 my-1 pt-1">
                   <Link href="/products" className="block px-4 py-2 text-xs font-bold text-[#006CB8] hover:underline">

@@ -280,7 +280,16 @@ const TargetAudienceSection = ({
 
           {/* Right Side Image with Pure C-Curve Divider */}
           <div className="w-full lg:w-[46%] xl:w-[48%] relative min-h-[360px] lg:min-h-[520px] overflow-hidden">
-            <div className="absolute inset-0 w-full h-full lg:[clip-path:polygon(26%_0%,100%_0%,100%_100%,0%_100%,6%_75%,15%_50%,22%_25%)]">
+            {/* SVG Definition for the Smooth C-Curve Clip Path */}
+            <svg width="0" height="0" className="absolute pointer-events-none">
+              <defs>
+                <clipPath id="c-curve-clip" clipPathUnits="objectBoundingBox">
+                  <path d="M 0.25 0 L 1 0 L 1 1 L 0.25 1 C -0.0 0.0, -0.00 0.2, 0.25 0 Z" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            <div className="absolute inset-0 w-full h-full lg:[clip-path:url(#c-curve-clip)]">
               <Image
                 src={image}
                 alt={
