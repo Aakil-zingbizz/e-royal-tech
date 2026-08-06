@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FeaturesData, FeatureItem } from "@/types/product";
+import FadeInSection from "@/app/component/ui/FadeInSection";
 
 interface FeaturesSectionProps {
   features?: FeaturesData;
@@ -46,19 +47,21 @@ const FeaturesSection = ({
   return (
     <section className="w-full py-16 md:py-24 bg-white">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col justify-center items-center">
-          {/* {features?.badge && (
-            <div className="inline-block mb-3">
-              <span className="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-50 text-[#0066B3] border border-blue-100">
-                {features.badge}
-              </span>
-            </div>
-          )} */}
-          <h2 className="text-3xl md:text-4xl font-semibold text-black mb-6">
-            {heading}
-          </h2>
-          <p className="text-black text-base w-3/4">{description}</p>
-        </div>
+        <FadeInSection animation="fade-up" duration={1000}>
+          <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col justify-center items-center">
+            {/* {features?.badge && (
+              <div className="inline-block mb-3">
+                <span className="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-[rgba(var(--theme-color-rgb),0.08)] text-[var(--theme-color)] border border-[rgba(var(--theme-color-rgb),0.2)]">
+                  {features.badge}
+                </span>
+              </div>
+            )} */}
+            <h2 className="text-3xl md:text-4xl font-semibold text-black mb-6">
+              {heading}
+            </h2>
+            <p className="text-black text-base w-3/4">{description}</p>
+          </div>
+        </FadeInSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {items.map((item: FeatureItem, index: number) => {
@@ -68,31 +71,35 @@ const FeaturesSection = ({
                 : `/products/icons/${item.icon || "shield"}.svg`;
 
             return (
-              <div
-                key={index}
-                className="bg-[#006CB8]/10 rounded-2xl p-8 md:p-10 text-center flex flex-col items-center hover:shadow-md transition-shadow"
+              <FadeInSection 
+                key={index} 
+                animation="fade-up" 
+                duration={1000} 
+                delay={index * 150}
               >
-                <div className="mb-6 flex items-center justify-center h-12 w-12">
-                  <Image
-                    src={iconSrc}
-                    alt={item.title}
-                    width={48}
-                    height={48}
-                    className="w-12 h-12 object-contain"
-                  />
+                <div className="bg-[rgba(var(--theme-color-rgb),0.1)] rounded-2xl p-8 md:p-10 text-center flex flex-col items-center hover:shadow-md transition-shadow h-full">
+                  <div className="mb-6 flex items-center justify-center h-12 w-12">
+                    <Image
+                      src={iconSrc}
+                      alt={item.title}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-black mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                    {item.badge && (
+                      <span className="block mb-2 font-medium text-gray-900">
+                        {item.badge}
+                      </span>
+                    )}
+                    {item.description}
+                  </p>
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-black mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-                  {item.badge && (
-                    <span className="block mb-2 font-medium text-gray-900">
-                      {item.badge}
-                    </span>
-                  )}
-                  {item.description}
-                </p>
-              </div>
+              </FadeInSection>
             );
           })}
         </div>

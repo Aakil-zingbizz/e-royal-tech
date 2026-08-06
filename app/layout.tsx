@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Header from "./component/Home/Header";
 import Footer from "./component/Home/Footer";
@@ -7,6 +7,12 @@ import Footer from "./component/Home/Footer";
 const manrope = Manrope({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-manrope",
+  subsets: ["latin"],
+});
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  variable: "--font-bebas-neue",
   subsets: ["latin"],
 });
 
@@ -21,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} h-full antialiased`}>
+    <html lang="en" className={`${manrope.variable} ${bebasNeue.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
         <Header />
         {children}

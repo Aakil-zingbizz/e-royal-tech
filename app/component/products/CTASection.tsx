@@ -32,12 +32,12 @@ const CTASection = ({ cta = defaultCTA }: CTASectionProps) => {
   };
 
   return (
-    <section className="w-full py-24 bg-[#006CB8]">
+    <section className="w-full py-24 bg-[var(--theme-color)]">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
           {heading}
         </h2>
-        <p className="text-blue-50 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-white text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
           {description}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

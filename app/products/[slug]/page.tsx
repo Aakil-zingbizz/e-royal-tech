@@ -10,6 +10,7 @@ import LogoCarousel from "@/app/component/Home/LogoCarousel";
 import Testimonial from "@/app/component/Home/Testimonial";
 import CTASection from "@/app/component/products/CTASection";
 import AIFeatureSection from "@/app/component/products/AIFeatureSection";
+import FadeInSection from "@/app/component/ui/FadeInSection";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -59,29 +60,56 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     notFound();
   }
 
+  const hexToRgb = (hex: string) => {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result
+      ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}`
+      : "0, 108, 184";
+  };
+  const themeColor = product.themeColor || "#006CB8";
+  const themeColorRgb = hexToRgb(themeColor);
+
   return (
-    <main className="flex min-h-screen flex-col bg-white">
+    <main
+      className="flex min-h-screen flex-col bg-white overflow-hidden"
+      style={
+        {
+          "--theme-color": themeColor,
+          "--theme-color-rgb": themeColorRgb,
+        } as React.CSSProperties
+      }
+    >
       <ProductBanner banner={product.banner} product={product} />
+
       <FeaturesSection features={product.features} />
+
       {product.sez && <SEZSection sez={product.sez} />}
-      <CounterSection counter={product.counter} />
-      <TargetAudienceSection targetAudience={product.targetAudience} />
-      {/* Combined Counter & Target Audience sections with ONE single shared blurred sphere */}
-      {/* <div className="relative w-full overflow-hidden">
-        <div
-          className="absolute -left-28 md:-left-40 top-20 md:top-28 w-[280px] h-[280px] md:w-[420px] md:h-[420px] rounded-full pointer-events-none opacity-20 z-0"
-          style={{
-            backgroundColor: "#016CB8",
-            filter: "blur(75px)",
-          }}
-        />
-        <div className="relative z-10">
-        </div>
-      </div> */}
-      {(slug === "impex" || slug === "freight") && <AIFeatureSection />}
-      <LogoCarousel {...(product.logoCarousel || {})} />
-      <Testimonial testimonials={product.testimonials} />
-      <CTASection cta={product.cta} />
+
+      <FadeInSection animation="scale-up" duration={1000}>
+        <CounterSection counter={product.counter} />
+      </FadeInSection>
+
+      <FadeInSection animation="blur-in" duration={1200}>
+        <TargetAudienceSection targetAudience={product.targetAudience} />
+      </FadeInSection>
+
+      {(slug === "impex" || slug === "freight") && (
+        <FadeInSection animation="scale-up" duration={1200}>
+          <AIFeatureSection />
+        </FadeInSection>
+      )}
+
+      <FadeInSection animation="fade-in" duration={1000}>
+        <LogoCarousel {...(product.logoCarousel || {})} />
+      </FadeInSection>
+
+      <FadeInSection animation="slide-right" duration={1200}>
+        <Testimonial testimonials={product.testimonials} />
+      </FadeInSection>
+
+      <FadeInSection animation="blur-in" duration={1500}>
+        <CTASection cta={product.cta} />
+      </FadeInSection>
     </main>
   );
 }

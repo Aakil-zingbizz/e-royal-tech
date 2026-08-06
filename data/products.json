@@ -15,6 +15,7 @@
     "shortDescription": "eRoyal IMPEX is a cloud-based ICEGATE customs filing software that helps customs brokers, importers, exporters, and logistics providers simplify Shipping Bills, Bills of Entry, customs documentation, and regulatory compliance through one secure platform.",
 
     "logo": "/home/product-logo/impex.svg",
+    "themeColor": "#D39F4A",
     "mockupImage": "/products/impex-mockup.png",
 
     "banner": {
@@ -265,6 +266,7 @@
     "tagline": "Smarter Freight Forwarding for Seamless Global Logistics",
     "shortDescription": "Streamline freight forwarding operations with a cloud-based platform that automates documentation, shipment tracking, compliance, and reporting for air, sea, and multimodal logistics.",
     "logo": "/home/product-logo/freight.svg",
+    "themeColor": "#2175BE",
     "mockupImage": "/products/freight-mockup.png",
 
     "banner": {
@@ -401,6 +403,7 @@
     "tagline": "Smart Accounting for Logistics & Trade Businesses",
     "shortDescription": "Manage accounting, invoicing, financial reporting, and business transactions with an integrated platform designed for customs brokers, freight forwarders, and logistics companies.",
     "logo": "/home/product-logo/accounts.svg",
+    "themeColor": "#4472C4",
     "mockupImage": "/products/accounts-mockup.png",
 
     "banner": {
@@ -537,6 +540,7 @@
     "tagline": "Smart SCMTR Filing for Connected Supply Chains",
     "shortDescription": "Simplify SCMTR filing and connect shipping lines, sea agents, custodians, terminal operators, and freight forwarders through one secure cloud-based platform.",
     "logo": "/home/product-logo/scm.svg",
+    "themeColor": "#05B6E9",
     "mockupImage": "/products/scm-mockup.png",
 
     "banner": {

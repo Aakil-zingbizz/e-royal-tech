@@ -76,10 +76,10 @@ const CounterSection = ({ counter = defaultCounter }: CounterSectionProps) => {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-12 md:py-16 flex flex-col items-center justify-center text-center bg-[#006CB8]/10"
+      className="w-full py-12 md:py-16 flex flex-col items-center justify-center text-center bg-[rgba(var(--theme-color-rgb),0.1)]"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-6xl md:text-7xl lg:text-[5rem] font-bold text-[#006CB8] mb-6 tracking-tight ">
+        <h2 className="text-6xl md:text-7xl lg:text-[5rem] font-bold text-[var(--theme-color)] mb-6 tracking-tight ">
           {formattedCount}
           {suffix}
         </h2>

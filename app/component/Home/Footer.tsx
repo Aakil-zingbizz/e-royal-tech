@@ -28,13 +28,13 @@ const Footer = () => {
 
           {/* Column 2: Quick Links */}
           <div className="flex flex-col space-y-6">
-            <h4 className="text-sm font-bold text-[#333333] uppercase tracking-wider">
+            <h4 className="text-xl font-bold text-[#333333] uppercase tracking-wider">
               QUICK LINKS
             </h4>
             <ul className="flex flex-col space-y-4 text-[15px] text-[#333333]">
               <li>
                 <Link
-                  href="#"
+                  href="/about"
                   className="hover:text-[#006CB8] transition-colors"
                 >
                   About us
@@ -50,31 +50,31 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/careers"
                   className="hover:text-[#006CB8] transition-colors"
                 >
                   Careers
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
-                  href="#"
+                  href="events"
                   className="hover:text-[#006CB8] transition-colors"
                 >
                   Events
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
-                  href="#"
+                  href="/blogs"
                   className="hover:text-[#006CB8] transition-colors"
                 >
-                  News
+                  Blogs
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="faq"
                   className="hover:text-[#006CB8] transition-colors"
                 >
                   FAQ
@@ -85,7 +85,7 @@ const Footer = () => {
 
           {/* Column 3: Contact */}
           <div className="flex flex-col space-y-6">
-            <h4 className="text-sm font-bold text-[#333333] uppercase tracking-wider">
+            <h4 className="text-xl font-bold text-[#333333] uppercase tracking-wider">
               CONTACT
             </h4>
             <div className="flex flex-col space-y-5 text-[15px] text-[#333333]">

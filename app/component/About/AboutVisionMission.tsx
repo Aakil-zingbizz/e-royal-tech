@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeInSection from "@/app/component/ui/FadeInSection";
 
 const EyeIcon = () => (
   <svg className="w-7 h-7 text-[#0a192f]" viewBox="0 0 24 24" fill="currentColor">
@@ -19,30 +20,34 @@ const AboutVisionMission = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Vision Card */}
-          <div className="bg-white rounded-xl shadow-[0_2px_15px_rgba(0,0,0,0.03)] border border-gray-100 p-10 lg:p-12">
-            <div className="mb-6">
-              <EyeIcon />
+          <FadeInSection animation="fade-up" delay={0}>
+            <div className="bg-white rounded-xl shadow-[0_2px_15px_rgba(0,0,0,0.03)] border border-gray-100 p-10 lg:p-12 h-full">
+              <div className="mb-6">
+                <EyeIcon />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0a192f] mb-4">
+                Our Vision
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                To be the global benchmark for logistics intelligence, transforming complex trade data into actionable insights that drive sustainable growth for the world's supply chains.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-[#0a192f] mb-4">
-              Our Vision
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              To be the global benchmark for logistics intelligence, transforming complex trade data into actionable insights that drive sustainable growth for the world's supply chains.
-            </p>
-          </div>
+          </FadeInSection>
 
           {/* Mission Card */}
-          <div className="bg-white rounded-xl shadow-[0_2px_15px_rgba(0,0,0,0.03)] border border-gray-100 p-10 lg:p-12">
-            <div className="mb-6">
-              <RocketIcon />
+          <FadeInSection animation="fade-up" delay={150}>
+            <div className="bg-white rounded-xl shadow-[0_2px_15px_rgba(0,0,0,0.03)] border border-gray-100 p-10 lg:p-12 h-full">
+              <div className="mb-6">
+                <RocketIcon />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0a192f] mb-4">
+                Our Mission
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Our mission is to empower logistics businesses with innovative, secure, and user-centric software solutions that simplify complex processes and enhance operational excellence.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-[#0a192f] mb-4">
-              Our Mission
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              Our mission is to empower logistics businesses with innovative, secure, and user-centric software solutions that simplify complex processes and enhance operational excellence.
-            </p>
-          </div>
+          </FadeInSection>
 
         </div>
       </div>

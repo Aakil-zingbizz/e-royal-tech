@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeInSection from "@/app/component/ui/FadeInSection";
 
 const AboutHero = () => {
   return (
@@ -16,33 +17,41 @@ const AboutHero = () => {
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-3xl">
-          <p className="text-sm font-medium tracking-widest text-gray-300 uppercase">
-            Established 2003
-          </p>
-          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-            About eRoyal Tech Systems
-          </h1>
-          <p className="mt-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
-            Powering Global Logistics with Intelligent Software Since 2003. With over two decades of experience, eRoyal Tech Systems has been at the forefront of digital transformation in the logistics sector, delivering robust, scalable, and secure enterprise solutions that drive global trade forward.
-          </p>
+          <FadeInSection animation="fade-up" delay={0}>
+            <p className="text-sm font-medium tracking-widest text-gray-300 uppercase">
+              Established 2003
+            </p>
+          </FadeInSection>
+          <FadeInSection animation="fade-up" delay={150}>
+            <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
+              About eRoyal Tech Systems
+            </h1>
+          </FadeInSection>
+          <FadeInSection animation="fade-up" delay={300}>
+            <p className="mt-6 text-lg text-gray-300 leading-relaxed max-w-2xl">
+              Powering Global Logistics with Intelligent Software Since 2003. With over two decades of experience, eRoyal Tech Systems has been at the forefront of digital transformation in the logistics sector, delivering robust, scalable, and secure enterprise solutions that drive global trade forward.
+            </p>
+          </FadeInSection>
 
-          <div className="mt-12 flex items-center space-x-10">
-            <div>
-              <div className="text-4xl sm:text-5xl font-bold text-white">20+</div>
-              <div className="mt-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
-                Years of Expertise
+          <FadeInSection animation="fade-up" delay={450}>
+            <div className="mt-12 flex items-center space-x-10">
+              <div>
+                <div className="text-4xl sm:text-5xl font-bold text-white">20+</div>
+                <div className="mt-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
+                  Years of Expertise
+                </div>
+              </div>
+              
+              <div className="h-16 w-px bg-gray-600"></div>
+
+              <div>
+                <div className="text-4xl sm:text-5xl font-bold text-white">1k+</div>
+                <div className="mt-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
+                  Global Clients
+                </div>
               </div>
             </div>
-            
-            <div className="h-16 w-px bg-gray-600"></div>
-
-            <div>
-              <div className="text-4xl sm:text-5xl font-bold text-white">1k+</div>
-              <div className="mt-2 text-xs font-semibold tracking-wider text-gray-400 uppercase">
-                Global Clients
-              </div>
-            </div>
-          </div>
+          </FadeInSection>
         </div>
       </div>
     </section>

@@ -15,7 +15,7 @@ const renderAudienceIcon = (iconName?: string) => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#0066B3"
+          stroke="var(--theme-color)"
           strokeWidth="1.6"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -36,7 +36,7 @@ const renderAudienceIcon = (iconName?: string) => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#0066B3"
+          stroke="var(--theme-color)"
           strokeWidth="1.6"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -55,7 +55,7 @@ const renderAudienceIcon = (iconName?: string) => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#0066B3"
+          stroke="var(--theme-color)"
           strokeWidth="1.6"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -73,7 +73,7 @@ const renderAudienceIcon = (iconName?: string) => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#0066B3"
+          stroke="var(--theme-color)"
           strokeWidth="1.6"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -90,7 +90,7 @@ const renderAudienceIcon = (iconName?: string) => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#0066B3"
+          stroke="var(--theme-color)"
           strokeWidth="1.6"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -106,7 +106,7 @@ const renderAudienceIcon = (iconName?: string) => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#0066B3"
+          stroke="var(--theme-color)"
           strokeWidth="1.6"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -122,7 +122,7 @@ const renderAudienceIcon = (iconName?: string) => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#0066B3"
+          stroke="var(--theme-color)"
           strokeWidth="1.6"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -157,7 +157,7 @@ const renderFormattedDescription = (text: string) => {
             nextParts.push(
               <span
                 key={`${keyword}-${i}`}
-                className="font-semibold text-[#0066B3]"
+                className="font-semibold text-[var(--theme-color)]"
               >
                 {keyword}
               </span>,
@@ -221,14 +221,14 @@ const TargetAudienceSection = ({
       return (
         <>
           Built for Businesses That <br />
-          Keep <span className="text-[#0066B3]">{headingHighlight}</span>
+          Keep <span className="text-[var(--theme-color)]">{headingHighlight}</span>
         </>
       );
     }
     return (
       <>
         {headingPrefix} <br className="hidden sm:inline" />
-        <span className="text-[#0066B3]">{headingHighlight}</span>
+        <span className="text-[var(--theme-color)]">{headingHighlight}</span>
       </>
     );
   };
@@ -241,7 +241,7 @@ const TargetAudienceSection = ({
           <div className="w-full lg:w-[54%] xl:w-[52%] p-6 sm:p-8 lg:p-10 xl:p-12 flex flex-col justify-center relative z-10">
             {badge && (
               <div className="inline-flex">
-                <span className="px-4 py-1 rounded-full border border-blue-200 text-[#0066B3] text-xs sm:text-sm font-semibold bg-white shadow-sm">
+                <span className="px-4 py-1 rounded-full border border-[rgba(var(--theme-color-rgb),0.3)] text-[var(--theme-color)] text-xs sm:text-sm font-semibold bg-white shadow-sm">
                   {badge}
                 </span>
               </div>
@@ -257,7 +257,7 @@ const TargetAudienceSection = ({
 
             {/* Trusted by Divider (Label on left + line on right) */}
             <div className="flex items-center gap-4 my-5 lg:my-6 max-w-2xl">
-              <span className="text-[#0066B3] font-bold text-sm sm:text-base whitespace-nowrap">
+              <span className="text-[var(--theme-color)] font-bold text-sm sm:text-base whitespace-nowrap">
                 {trustedByText}
               </span>
               <div className="flex-grow border-t border-gray-200"></div>
@@ -267,7 +267,7 @@ const TargetAudienceSection = ({
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 lg:gap-x-5 gap-y-4 lg:gap-y-5 max-w-2xl">
               {audiences.map((item: AudienceItem, index: number) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="w-11 h-11 sm:w-12 sm:h-12 flex-shrink-0 flex items-center justify-center text-[#0066B3] bg-white rounded-xl sm:rounded-2xl border border-gray-100 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)]">
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 flex-shrink-0 flex items-center justify-center text-[var(--theme-color)] bg-white rounded-xl sm:rounded-2xl border border-gray-100 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)]">
                     {renderAudienceIcon(item.icon)}
                   </div>
                   <span className="font-semibold text-gray-800 text-xs sm:text-sm whitespace-pre-line leading-tight">

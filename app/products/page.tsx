@@ -22,100 +22,110 @@ export default function ProductsCatalogPage() {
               Our Product Suite
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-20">
             Intelligent Software for <br className="hidden sm:block" />
             <span className="text-[#0066B3]">Global Logistics &amp; Trade</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-            Purpose-built platforms designed to streamline customs filing, container fleet control, supply chain logistics, and freight operations with unmatched precision.
+            Purpose-built platforms designed to streamline customs filing,
+            container fleet control, supply chain logistics, and freight
+            operations with unmatched precision.
           </p>
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
-          {products.map((product) => (
-            <div
-              key={product.id}
-              className="bg-white rounded-3xl p-8 md:p-10 border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
-            >
-              <div>
-                {/* Logo and Tag */}
-                <div className="flex items-center justify-between gap-4 mb-6">
-                  <div className="relative w-44 h-12">
-                    <Image
-                      src={product.logo}
-                      alt={product.name}
-                      fill
-                      className="object-contain object-left"
-                    />
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 bg-slate-100 text-slate-700 rounded-full">
-                    {product.slug.toUpperCase()}
-                  </span>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-20">
+          {products.map((product) => {
+            const productStyles: Record<
+              string,
+              { color: string; bgClass: string; watermark: string }
+            > = {
+              impex: {
+                color: "#D39F4A",
+                bgClass: "bg-gradient-to-br from-[#FFFBF4] to-[#FCEFDA]",
+                watermark: "Impex",
+              },
+              freight: {
+                color: "#2175BE",
+                bgClass: "bg-gradient-to-br from-[#F2F7FC] to-[#DDEAF6]",
+                watermark: "Freight",
+              },
+              accounts: {
+                color: "#4472C4",
+                bgClass: "bg-gradient-to-br from-[#F4F6FC] to-[#E4E9F5]",
+                watermark: "accounts",
+              },
+              scm: {
+                color: "#05B6E9",
+                bgClass: "bg-gradient-to-br from-[#F0FAFF] to-[#DEEDF9]",
+                watermark: "SCM",
+              },
+            };
+            const style = productStyles[product.slug] || productStyles["impex"];
+            const titleText =
+              product.titleHighlight || product.name.replace("eRoyal ", "");
 
-                {/* Title & Tagline */}
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 group-hover:text-[#0066B3] transition-colors">
-                  {product.name}
-                </h2>
-                <p className="text-sm font-semibold text-[#0066B3] mb-4">
-                  {product.tagline}
-                </p>
-
-                {/* Description */}
-                <p className="text-gray-600 text-base leading-relaxed mb-6">
-                  {product.shortDescription}
-                </p>
-
-                {/* Feature Highlights */}
-                <div className="space-y-2.5 mb-8">
-                  {product.features.items.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-2.5 text-sm text-gray-700">
-                      <svg
-                        className="w-5 h-5 text-[#0066B3] flex-shrink-0 mt-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                      </svg>
-                      <span>
-                        <strong className="font-medium text-gray-900">{feature.title}:</strong>{" "}
-                        {feature.description.slice(0, 80)}...
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+            return (
+              <div
+                key={product.id}
+                className={`relative overflow-hidden rounded-[2rem] p-8 md:p-10 flex flex-col justify-between items-start transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg ${style.bgClass} group`}
+              >
+                {/* Full Card Clickable Link */}
                 <Link
                   href={`/products/${product.slug}`}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0066B3] text-white font-semibold text-sm hover:bg-blue-700 transition-all shadow-sm group-hover:shadow-md"
+                  className="absolute inset-0 z-0"
+                  aria-label={`View ${titleText}`}
+                />
+
+                {/* Watermark Background Text */}
+                <div
+                  className="absolute right-0 bottom-[-10px] md:bottom-[-20px] text-[100px] md:text-[130px] font-black leading-none select-none pointer-events-none opacity-[0.1] tracking-tighter z-0"
+                  style={{ color: style.color }}
                 >
-                  Explore {product.name}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2.5}
-                    stroke="currentColor"
-                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  {style.watermark}
+                </div>
+
+                <div className="relative z-10 w-full mb-8 pointer-events-none">
+                  {/* Title Section */}
+                  <div className="mb-6">
+                    <span className="text-sm font-bold text-gray-800 block mb-1">
+                      {product.titlePrefix || "e-Royal"}
+                    </span>
+                    <h3
+                      className="text-4xl md:text-[42px] font-extrabold-override font-manrope tracking-tight"
+                      style={{ color: style.color }}
+                    >
+                      {titleText}
+                    </h3>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-[15px] text-gray-700 leading-relaxed max-w-[95%] min-h-[80px]">
+                    {product.shortDescription}
+                  </p>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="relative z-20 flex flex-wrap items-center gap-6 mt-auto">
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-white font-bold text-sm transition-opacity hover:opacity-90"
+                    style={{ backgroundColor: style.color }}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
-                </Link>
-                <Link
-                  href="/contact"
-                  className="text-sm font-medium text-gray-600 hover:text-[#0066B3] transition-colors"
-                >
-                  Request Demo &rarr;
-                </Link>
+                    Explore {titleText} &rarr;
+                  </Link>
+
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center text-sm font-bold hover:opacity-80 transition-opacity"
+                    style={{ color: style.color }}
+                  >
+                    Request Demo &rarr;
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Bottom Banner */}
@@ -124,7 +134,8 @@ export default function ProductsCatalogPage() {
             Need a custom integration or multi-product deployment?
           </h3>
           <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-            Our logistics technology consultants are ready to tailor an enterprise solution tailored to your operational workflows.
+            Our logistics technology consultants are ready to tailor an
+            enterprise solution tailored to your operational workflows.
           </p>
           <Link
             href="/contact"

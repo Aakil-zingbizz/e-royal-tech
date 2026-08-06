@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import FadeInSection from "@/app/component/ui/FadeInSection";
 
 interface LogoCarouselProps {
   title?: string;
@@ -19,11 +20,13 @@ const LogoCarousel = ({
 
   return (
     <section className="py-16 bg-white overflow-hidden border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
-        <p className="text-center text-base font-normal text-[#333333] tracking-wider">
-          {title}
-        </p>
-      </div>
+      <FadeInSection animation="fade-up" delay={0}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+          <p className="text-center text-base font-normal text-[#333333] tracking-wider">
+            {title}
+          </p>
+        </div>
+      </FadeInSection>
 
       <div className="relative w-full flex overflow-hidden">
         {/* 
@@ -43,7 +46,7 @@ const LogoCarousel = ({
                 alt={`Partner Logo ${index + 1}`}
                 fill
                 className="object-contain"
-                sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
+                sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px grayscale-100"
               />
             </div>
           ))}
@@ -58,8 +61,8 @@ const LogoCarousel = ({
                 alt={`Partner Logo ${index + 1}`}
                 fill
                 className="object-contain"
-                sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
-              />
+                sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px grayscale-100"
+              />``
             </div>
           ))}
         </div>

@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { TestimonialItem } from "@/types/product";
+import FadeInSection from "@/app/component/ui/FadeInSection";
 
 interface TestimonialProps {
   testimonials?: TestimonialItem[];
@@ -35,6 +36,14 @@ const Testimonial = ({ testimonials }: TestimonialProps) => {
   // Guard against index out of range if items change
   const currentIndex = activeIndex < items.length ? activeIndex : 0;
 
+  useEffect(() => {
+    if (items.length <= 1) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [items.length]);
+
   const handlePrev = () => {
     setActiveIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
   };
@@ -47,29 +56,42 @@ const Testimonial = ({ testimonials }: TestimonialProps) => {
     <section className="py-24 bg-[#F1F5F9] relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Large Quote Watermark Background */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] leading-none font-serif text-slate-200/50 select-none z-[-1] pointer-events-none">
-          &ldquo;
-        </div>
+        <FadeInSection animation="fade-in" duration={1500}>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] leading-none font-serif text-slate-200/50 select-none z-[-1] pointer-events-none">
+            &ldquo;
+          </div>
+        </FadeInSection>
 
         <div className="flex flex-col items-center text-center">
           {/* Quote Icon */}
-          <div className="relative w-12 h-12 mb-6">
-            <Image src="/home/quote.svg" alt="Quote" fill className="object-contain" />
-          </div>
+          <FadeInSection animation="fade-up" delay={0}>
+            <div className="relative w-12 h-12 mb-6">
+              <Image src="/home/quote.svg" alt="Quote" fill className="object-contain" />
+            </div>
+          </FadeInSection>
 
-          {/* Testimonial Content */}
-          <div className="min-h-[200px] flex flex-col justify-center">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#333333] font-medium leading-snug mb-10 max-w-4xl mx-auto">
-              "{items[currentIndex]?.quote}"
-            </h3>
+          {/* Testimonial Content Track */}
+          <div className="min-h-[250px] w-full max-w-4xl mx-auto overflow-hidden relative flex flex-col justify-center">
+            <div
+              className="flex w-full transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {items.map((item, index) => (
+                <div key={index} className="w-full shrink-0 flex flex-col justify-center px-4">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl text-[#333333] font-medium-override font-manrope leading-snug mb-10 mx-auto">
+                    "{item.quote}"
+                  </h3>
 
-            <div className="flex flex-col items-center gap-1">
-              <p className="text-[#333333] font-medium text-lg">
-                {items[currentIndex]?.name}
-              </p>
-              <p className="text-sm text-[#666666]">
-                {items[currentIndex]?.title}
-              </p>
+                  <div className="flex flex-col items-center gap-1">
+                    <p className="text-[#333333] font-medium text-lg">
+                      {item.name}
+                    </p>
+                    <p className="text-sm text-[#666666]">
+                      {item.title}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 

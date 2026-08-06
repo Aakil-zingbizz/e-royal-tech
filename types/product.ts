@@ -98,6 +98,7 @@ export interface Product {
   shortDescription: string;
   logo: string;
   mockupImage: string;
+  themeColor?: string;
   banner: ProductBannerData;
   features: FeaturesData;
   sez?: SEZData;
