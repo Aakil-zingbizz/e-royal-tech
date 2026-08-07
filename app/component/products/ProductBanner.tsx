@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Product, ProductBannerData } from "@/types/product";
 import FadeInSection from "@/app/component/ui/FadeInSection";
+import LottieAnimation from "@/app/component/ui/LottieAnimation";
+import heroPillAnimation from "@/Pill Animations/hero-pill.json";
 
 interface ProductBannerProps {
   banner?: ProductBannerData;
   product?: Product;
 }
-
-
 
 const ProductBanner = ({ banner, product }: ProductBannerProps) => {
   const titlePrefix = banner?.titlePrefix || product?.titlePrefix || "eRoyal";
@@ -82,16 +82,22 @@ const ProductBanner = ({ banner, product }: ProductBannerProps) => {
         </FadeInSection>
 
         {highlights && highlights.length > 0 && (
-          <FadeInSection animation="fade-up" delay={450} duration={800} className="w-full max-w-3xl flex items-center justify-center">
+          <FadeInSection
+            animation="fade-up"
+            delay={450}
+            duration={800}
+            className="w-full max-w-3xl flex items-center justify-center"
+          >
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-6 md:mb-8 w-full">
               {highlights.map((highlight, index) => (
                 <div
                   key={index}
                   className="flex items-center justify-center p-2.5 md:p-3.5 rounded-2xl bg-gradient-to-br from-[#E3F1FE] via-[#ECF5FE] to-[#F9FCFF] shadow-[0_0px_4px_0px_rgba(0,0,0,0.10)] hover:shadow-md transition-shadow text-center flex-1 min-w-[180px] md:min-w-[200px]"
                 >
-                <span className="text-[11px] md:text-sm font-semibold text-[#1E293B] leading-snug">
+                  <span className="text-[11px] md:text-sm font-semibold text-[#1E293B] leading-snug">
                     {(() => {
-                      const isCenter = index === Math.floor(highlights.length / 2);
+                      const isCenter =
+                        index === Math.floor(highlights.length / 2);
                       if (isCenter) {
                         const words = highlight.split(" ");
                         if (words.length > 2) {
@@ -132,22 +138,47 @@ const ProductBanner = ({ banner, product }: ProductBannerProps) => {
         </FadeInSection>
       </div>
 
+      {/* Full-width pill animation — scaled to section height, crops sides */}
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none z-0"
+        aria-hidden="true"
+      >
+        {/* Inner wrapper: matches Lottie canvas aspect ratio (3456×1278),
+            always fills the section height. Centred horizontally so any
+            overflow is clipped equally on both sides. */}
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 h-full"
+          style={{ aspectRatio: "3456 / 1278" }}
+        >
+          <LottieAnimation
+            animationData={heroPillAnimation}
+            className="w-full h-full"
+          />
+        </div>
+      </div>
+
       {/* Dashboard Image Section (At original large size) */}
-      <div className="relative z-0 w-full max-w-5xl lg:max-w-6xl aspect-[4/3] md:aspect-[16/9] flex items-center justify-center mb-16 md:mb-24">
-        <FadeInSection animation="scale-up" delay={750} duration={1000} className="w-full h-full relative">
+      <div className="relative z-10 w-full max-w-5xl lg:max-w-6xl aspect-[4/3] md:aspect-[16/9] flex items-center justify-center mb-16 md:mb-24">
+        <FadeInSection
+          animation="scale-up"
+          delay={750}
+          duration={1000}
+          className="w-full h-full relative"
+        >
           {/* Blurred Sphere Glow with #016CB8 */}
           <div
-            className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[1000px] md:h-[700px] rounded-full -z-10 pointer-events-none opacity-50"
+            className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[1000px] md:h-[650px] rounded-full -z-20 pointer-events-none opacity-50"
             style={{
               backgroundColor: "var(--theme-color)",
               filter: "blur(70px)",
             }}
           />
+
           <Image
             src={mockupImage}
             alt={`${titlePrefix} ${titleHighlight} Mockup`}
             fill
-            className="object-contain object-top drop-shadow-2xl -top-20"
+            className="object-contain object-top -top-20 z-10"
             priority
           />
         </FadeInSection>

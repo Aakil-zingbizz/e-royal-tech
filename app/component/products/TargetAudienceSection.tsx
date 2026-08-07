@@ -221,7 +221,8 @@ const TargetAudienceSection = ({
       return (
         <>
           Built for Businesses That <br />
-          Keep <span className="text-[var(--theme-color)]">{headingHighlight}</span>
+          Keep{" "}
+          <span className="text-[var(--theme-color)]">{headingHighlight}</span>
         </>
       );
     }
