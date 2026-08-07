@@ -1,7 +1,7 @@
 import React from "react";
 import FadeInSection from "@/app/component/ui/FadeInSection";
 
-const NewsHero = () => {
+const BlogsHero = () => {
   return (
     <section className="relative w-full h-[400px] flex items-center bg-[#006CB8]/40 overflow-hidden">
       {/* Background Image */}
@@ -20,7 +20,7 @@ const NewsHero = () => {
         <div className="w-full mx-auto">
           <FadeInSection animation="fade-up" delay={0}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-              Latest News & Insights
+              Latest Blogs & Insights
             </h1>
           </FadeInSection>
           <FadeInSection animation="fade-up" delay={150}>
@@ -34,4 +34,4 @@ const NewsHero = () => {
   );
 };
 
-export default NewsHero;
+export default BlogsHero;

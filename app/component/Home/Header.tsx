@@ -33,6 +33,7 @@ const Header = () => {
               alt="Royal Tech Systems"
               width={180}
               height={60}
+              priority
               className="h-14 w-auto object-contain"
             />
           </Link>
