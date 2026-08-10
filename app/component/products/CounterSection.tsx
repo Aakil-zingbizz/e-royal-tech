@@ -76,7 +76,7 @@ const CounterSection = ({ counter = defaultCounter }: CounterSectionProps) => {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-12 md:py-16 flex flex-col items-center justify-center text-center bg-[rgba(var(--theme-color-rgb),0.1)]"
+      className="relative w-full min-h-[280px] py-12 md:py-16 flex flex-col items-center justify-center text-center bg-[rgba(var(--theme-color-rgb),0.1)]"
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-6xl md:text-7xl lg:text-[5rem] font-bold text-[var(--theme-color)] mb-6 tracking-tight ">

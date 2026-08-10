@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { CTAData } from "@/types/product";
+import LottieAnimation from "@/app/component/ui/LottieAnimation";
+import ctaPillAnimation from "@/PillAnimations/cta-pill.json";
 
 interface CTASectionProps {
   cta?: CTAData;
@@ -22,17 +24,19 @@ const defaultCTA: CTAData = {
 const CTASection = ({ cta = defaultCTA }: CTASectionProps) => {
   const heading = cta?.heading || defaultCTA.heading;
   const description = cta?.description || defaultCTA.description;
-  const primaryCta = cta?.primaryCta || defaultCTA.primaryCta || {
-    text: "Get Started",
-    href: "/contact",
-  };
-  const secondaryCta = cta?.secondaryCta || defaultCTA.secondaryCta || {
-    text: "Contact Sales",
-    href: "/contact",
-  };
+  const primaryCta = cta?.primaryCta ||
+    defaultCTA.primaryCta || {
+      text: "Get Started",
+      href: "/contact",
+    };
+  const secondaryCta = cta?.secondaryCta ||
+    defaultCTA.secondaryCta || {
+      text: "Contact Sales",
+      href: "/contact",
+    };
 
   return (
-    <section className="w-full py-24 bg-[var(--theme-color)]">
+    <section className="relative w-full py-24 bg-[var(--theme-color)] h-[520px] flex items-center justify-center">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
           {heading}
@@ -40,6 +44,21 @@ const CTASection = ({ cta = defaultCTA }: CTASectionProps) => {
         <p className="text-white text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
           {description}
         </p>
+        <div
+          className="absolute inset-0 overflow-hidden pointer-events-none z-0"
+          aria-hidden="true"
+        >
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 h-full"
+            style={{ aspectRatio: "3456 / 520" }}
+          >
+            <LottieAnimation
+              animationData={ctaPillAnimation}
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href={primaryCta.href}

@@ -10,7 +10,11 @@ import LogoCarousel from "@/app/component/Home/LogoCarousel";
 import Testimonial from "@/app/component/Home/Testimonial";
 import CTASection from "@/app/component/products/CTASection";
 import AIFeatureSection from "@/app/component/products/AIFeatureSection";
+import AccountsConnectSection from "@/app/component/products/AccountsConnectSection";
 import FadeInSection from "@/app/component/ui/FadeInSection";
+import LottieAnimation from "@/app/component/ui/LottieAnimation";
+import numberingsPillAnimation from "@/PillAnimations/numbering-pill.json";
+import { replaceLottieColor } from "@/lib/lottieColorReplace";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -69,6 +73,14 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const themeColor = product.themeColor || "#006CB8";
   const themeColorRgb = hexToRgb(themeColor);
 
+  // Recolour pill animations to match this product's theme
+  const IMPEX_AMBER = "#D39F4A";
+  const themedNumberingsPill = replaceLottieColor(
+    numberingsPillAnimation,
+    IMPEX_AMBER,
+    themeColor
+  );
+
   return (
     <main
       className="flex min-h-screen flex-col bg-white overflow-hidden"
@@ -85,13 +97,34 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
       {product.sez && <SEZSection sez={product.sez} />}
 
-      <FadeInSection animation="scale-up" duration={1000}>
-        <CounterSection counter={product.counter} />
-      </FadeInSection>
+      {/* Accounts-only: standalone/connected ecosystem section */}
+      {slug === "accounts" && <AccountsConnectSection />}
 
-      <FadeInSection animation="blur-in" duration={1200}>
-        <TargetAudienceSection targetAudience={product.targetAudience} />
-      </FadeInSection>
+      {/* Counter & Target Audience Sections wrapped together with full-width Lottie background */}
+      <div className="relative overflow-hidden pb-12">
+        <div
+          className="absolute inset-0 pointer-events-none z-0"
+          aria-hidden="true"
+        >
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 h-full"
+            style={{ aspectRatio: "3456 / 1095" }}
+          >
+            <LottieAnimation
+              animationData={themedNumberingsPill}
+              className="w-full h-full"
+            />
+          </div>
+        </div>
+
+        <FadeInSection animation="scale-up" duration={1000}>
+          <CounterSection counter={product.counter} />
+        </FadeInSection>
+
+        <FadeInSection animation="blur-in" duration={1200}>
+          <TargetAudienceSection targetAudience={product.targetAudience} />
+        </FadeInSection>
+      </div>
 
       {(slug === "impex" || slug === "freight") && (
         <FadeInSection animation="scale-up" duration={1200}>

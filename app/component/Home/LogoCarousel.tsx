@@ -9,7 +9,7 @@ interface LogoCarouselProps {
 
 const defaultLogos = Array.from(
   { length: 21 },
-  (_, i) => `/home/logos/logo${i + 1}.png`
+  (_, i) => `/home/logos/logo${i + 1}.png`,
 );
 
 const LogoCarousel = ({
@@ -19,7 +19,7 @@ const LogoCarousel = ({
   const displayLogos = logos && logos.length > 0 ? logos : defaultLogos;
 
   return (
-    <section className="py-16 bg-white overflow-hidden border-b border-gray-100">
+    <section className="py-16 bg-white overflow-hidden border-y border-gray-100">
       <FadeInSection animation="fade-up" delay={0}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
           <p className="text-center text-base font-normal text-[#333333] tracking-wider">
@@ -62,7 +62,8 @@ const LogoCarousel = ({
                 fill
                 className="object-contain"
                 sizes="(max-width: 768px) 128px, (max-width: 1024px) 160px, 192px grayscale-100"
-              />``
+              />
+              ``
             </div>
           ))}
         </div>

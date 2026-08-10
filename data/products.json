@@ -115,7 +115,7 @@
         "Cloud-based accessibility"
       ],
 
-      "image": "/products/SEZ.jpg"
+      "image": "/products/impex/SEZ.jpg"
     },
 
     "counter": {
@@ -160,7 +160,7 @@
         }
       ],
 
-      "image": "/products/impex-audience.svg"
+      "image": "/products/impex/impex.webp"
     },
 
     "industryRecognition": {
@@ -243,7 +243,7 @@
 
       "heading": "Transform Your Customs Operations with eRoyal IMPEX",
 
-      "description": "Simplify ICEGATE filing, Shipping Bills, Bills of Entry, and customs documentation through one secure cloud-based platform. Schedule a personalized demo and discover how eRoyal IMPEX can help your business improve compliance, reduce manual work, and accelerate global trade.",
+      "description": "Discover how eRoyal IMPEX helps customs brokers, importers, and exporters simplify ICEGATE filing, customs documentation, and compliance through one secure cloud-based platform.",
 
       "primaryCta": {
         "text": "Request a Demo",
@@ -362,7 +362,7 @@
         }
       ],
 
-      "image": "/products/freight-audience.svg"
+      "image": "/products/freight/freight.webp"
     },
 
     "testimonials": [
@@ -499,7 +499,7 @@
         }
       ],
 
-      "image": "/products/accounts-audience.svg"
+      "image": "/products/accounts/accounts.webp"
     },
 
     "testimonials": [
@@ -636,7 +636,7 @@
         }
       ],
 
-      "image": "/products/scm-audience.svg"
+      "image": "/products/scm/scm.webp"
     },
 
     "testimonials": [

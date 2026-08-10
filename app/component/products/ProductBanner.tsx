@@ -3,7 +3,8 @@ import Link from "next/link";
 import { Product, ProductBannerData } from "@/types/product";
 import FadeInSection from "@/app/component/ui/FadeInSection";
 import LottieAnimation from "@/app/component/ui/LottieAnimation";
-import heroPillAnimation from "@/Pill Animations/hero-pill.json";
+import heroPillAnimation from "@/PillAnimations/hero-pill.json";
+import { replaceLottieColor } from "@/lib/lottieColorReplace";
 
 interface ProductBannerProps {
   banner?: ProductBannerData;
@@ -25,6 +26,15 @@ const ProductBanner = ({ banner, product }: ProductBannerProps) => {
     "Simplify Shipping Bills, Bills of Entry, and ICEGATE filing with a secure, cloud-based customs management platform built for customs brokers, importers, exporters, and logistics professionals.";
 
   const highlightColor = "var(--theme-color)";
+
+  // Recolour the pill animation to match this product's theme
+  const IMPEX_AMBER = "#D39F4A";
+  const productThemeColor = product?.themeColor || "#D39F4A";
+  const themedPillAnimation = replaceLottieColor(
+    heroPillAnimation,
+    IMPEX_AMBER,
+    productThemeColor
+  );
 
   const highlights = banner?.highlights ||
     product?.banner?.highlights || [
@@ -138,23 +148,16 @@ const ProductBanner = ({ banner, product }: ProductBannerProps) => {
         </FadeInSection>
       </div>
 
-      {/* Full-width pill animation — scaled to section height, crops sides */}
+      {/* Full-width pill animation — covers the full banner regardless of height */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none z-0"
         aria-hidden="true"
       >
-        {/* Inner wrapper: matches Lottie canvas aspect ratio (3456×1278),
-            always fills the section height. Centred horizontally so any
-            overflow is clipped equally on both sides. */}
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 h-full"
-          style={{ aspectRatio: "3456 / 1278" }}
-        >
-          <LottieAnimation
-            animationData={heroPillAnimation}
-            className="w-full h-full"
-          />
-        </div>
+        <LottieAnimation
+          animationData={themedPillAnimation}
+          className="w-full h-full"
+          preserveAspectRatio="xMidYMid slice"
+        />
       </div>
 
       {/* Dashboard Image Section (At original large size) */}
