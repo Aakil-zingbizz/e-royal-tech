@@ -76,9 +76,12 @@ const CounterSection = ({ counter = defaultCounter }: CounterSectionProps) => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-[280px] py-12 md:py-16 flex flex-col items-center justify-center text-center bg-[rgba(var(--theme-color-rgb),0.1)]"
+      className="relative w-full min-h-[300px] py-24 md:py-32 flex flex-col items-center justify-center text-center"
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Blurred oval background */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[100px] md:h-[140px] bg-[var(--theme-color)] opacity-[50] blur-[80px] md:blur-[100px] rounded-[100%] pointer-events-none z-0"></div>
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-6xl md:text-7xl lg:text-[5rem] font-bold text-[var(--theme-color)] mb-6 tracking-tight ">
           {formattedCount}
           {suffix}

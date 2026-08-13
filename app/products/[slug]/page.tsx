@@ -93,22 +93,15 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     >
       <ProductBanner banner={product.banner} product={product} />
 
-      <FeaturesSection features={product.features} />
-
-      {product.sez && <SEZSection sez={product.sez} />}
-
-      {/* Accounts-only: standalone/connected ecosystem section */}
-      {slug === "accounts" && <AccountsConnectSection />}
-
-      {/* Counter & Target Audience Sections wrapped together with full-width Lottie background */}
-      <div className="relative overflow-hidden pb-12">
+      {/* Features, Counter & Target Audience Sections wrapped together with full-width Lottie background */}
+      <div className="relative pb-12">
         <div
-          className="absolute inset-0 pointer-events-none z-0"
+          className="absolute inset-0 overflow-hidden pointer-events-none z-0"
           aria-hidden="true"
         >
           <div
             className="absolute top-0 left-1/2 -translate-x-1/2 h-full"
-            style={{ aspectRatio: "3456 / 1095" }}
+            style={{ aspectRatio: "3456 / 1839" }}
           >
             <LottieAnimation
               animationData={themedNumberingsPill}
@@ -116,6 +109,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             />
           </div>
         </div>
+
+        <FeaturesSection features={product.features} />
 
         <FadeInSection animation="scale-up" duration={1000}>
           <CounterSection counter={product.counter} />
@@ -125,6 +120,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           <TargetAudienceSection targetAudience={product.targetAudience} />
         </FadeInSection>
       </div>
+        {product.sez && <SEZSection sez={product.sez} />}
+
+      {/* Accounts-only: standalone/connected ecosystem section */}
+      {slug === "accounts" && <AccountsConnectSection />}
 
       {(slug === "impex" || slug === "freight") && (
         <FadeInSection animation="scale-up" duration={1200}>
