@@ -74,7 +74,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const themeColorRgb = hexToRgb(themeColor);
 
   // Recolour pill animations to match this product's theme
-  const IMPEX_AMBER = "#D39F4A";
+  const IMPEX_AMBER = "#FFAA22";
   const themedNumberingsPill = replaceLottieColor(
     numberingsPillAnimation,
     IMPEX_AMBER,
@@ -135,12 +135,13 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <LogoCarousel {...(product.logoCarousel || {})} />
       </FadeInSection>
 
-      <FadeInSection animation="slide-right" duration={1200}>
-        <Testimonial testimonials={product.testimonials} />
-      </FadeInSection>
-
+      {(slug === "impex" || slug === "freight") && (
+        <FadeInSection animation="slide-right" duration={1200}>
+          <Testimonial testimonials={product.testimonials} />
+        </FadeInSection>
+      )}
       <FadeInSection animation="blur-in" duration={1500}>
-        <CTASection cta={product.cta} />
+        <CTASection cta={product.cta} themeColor={themeColor} />
       </FadeInSection>
     </main>
   );

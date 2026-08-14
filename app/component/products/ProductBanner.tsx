@@ -28,7 +28,7 @@ const ProductBanner = ({ banner, product }: ProductBannerProps) => {
   const highlightColor = "var(--theme-color)";
 
   // Recolour the pill animation to match this product's theme
-  const IMPEX_AMBER = "#D39F4A";
+  const IMPEX_AMBER = "#FFAA22";
   const productThemeColor = product?.themeColor || "#D39F4A";
   const themedPillAnimation = replaceLottieColor(
     heroPillAnimation,

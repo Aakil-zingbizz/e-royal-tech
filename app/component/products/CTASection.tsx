@@ -2,9 +2,11 @@ import Link from "next/link";
 import { CTAData } from "@/types/product";
 import LottieAnimation from "@/app/component/ui/LottieAnimation";
 import ctaPillAnimation from "@/LottieAnimations/cta-pill.json";
+import { replaceLottieColor } from "@/lib/lottieColorReplace";
 
 interface CTASectionProps {
   cta?: CTAData;
+  themeColor?: string;
 }
 
 const defaultCTA: CTAData = {
@@ -21,7 +23,7 @@ const defaultCTA: CTAData = {
   },
 };
 
-const CTASection = ({ cta = defaultCTA }: CTASectionProps) => {
+const CTASection = ({ cta = defaultCTA, themeColor }: CTASectionProps) => {
   const heading = cta?.heading || defaultCTA.heading;
   const description = cta?.description || defaultCTA.description;
   const primaryCta = cta?.primaryCta ||
@@ -35,6 +37,11 @@ const CTASection = ({ cta = defaultCTA }: CTASectionProps) => {
       href: "/contact",
     };
 
+  const IMPEX_AMBER = "#FFAA22";
+  const themedPillAnimation = themeColor
+    ? replaceLottieColor(ctaPillAnimation, IMPEX_AMBER, themeColor)
+    : ctaPillAnimation;
+
   return (
     <section className="relative w-full py-16 md:py-24 flex items-center justify-center">
       <div
@@ -46,7 +53,7 @@ const CTASection = ({ cta = defaultCTA }: CTASectionProps) => {
           style={{ aspectRatio: "3456 / 520" }}
         >
           <LottieAnimation
-            animationData={ctaPillAnimation}
+            animationData={themedPillAnimation}
             className="w-full h-full"
           />
         </div>
