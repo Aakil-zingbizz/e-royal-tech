@@ -119,9 +119,9 @@
     },
 
     "counter": {
-      "target": 100000,
+      "target": 9000,
       "suffix": "+",
-      "description": "Trusted by businesses to streamline customs documentation and ICEGATE filing, helping import and export operations stay accurate, compliant, and efficient."
+      "description": "Shipments managed every day with efficient customs filing, documentation, and import-export workflows."
     },
     "targetAudience": {
       "badge": "Who We Serve",
@@ -323,9 +323,9 @@
     },
 
     "counter": {
-      "target": 100000,
+      "target": 500,
       "suffix": "+",
-      "description": "Supporting freight forwarders with reliable documentation, shipment visibility, and efficient logistics operations."
+      "description": "Shipments managed every day through streamlined customs, freight, and logistics operations, helping businesses move global trade efficiently."
     },
 
     "targetAudience": {

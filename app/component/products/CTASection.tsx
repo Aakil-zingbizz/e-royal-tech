@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CTAData } from "@/types/product";
 import LottieAnimation from "@/app/component/ui/LottieAnimation";
-import ctaPillAnimation from "@/PillAnimations/cta-pill.json";
+import ctaPillAnimation from "@/LottieAnimations/cta-pill.json";
 
 interface CTASectionProps {
   cta?: CTAData;

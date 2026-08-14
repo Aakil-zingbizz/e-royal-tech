@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import LottieAnimation from "@/app/component/ui/LottieAnimation";
-import aiAnimation from "@/PillAnimations/ai.json";
+import AiLottie from "./AiLottie";
 
 const DocIcon = ({ className }: { className?: string }) => (
   <svg
@@ -127,12 +126,6 @@ const DocumentCluster = () => (
   </div>
 );
 
-const AIBox = () => (
-  <div className="relative z-20 flex-shrink-0 w-[160px] h-[160px] lg:w-[180px] lg:h-[180px] rounded-full bg-white flex items-center justify-center mx-auto border-[1.2px] p-6">
-    <LottieAnimation animationData={aiAnimation} className="w-full h-full" />
-  </div>
-);
-
 const DashboardBox = () => (
   <div className="relative z-10 flex-shrink-0 w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[440px] aspect-video rounded-2xl shadow-[0_12px_40px_rgb(0,0,0,0.12)] border border-slate-200 p-1 bg-white">
     <div className="relative w-full h-full bg-gray-50 overflow-hidden rounded-xl">
@@ -184,8 +177,6 @@ const AIFeatureSection = () => {
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-1.5 h-1.5 rounded-full bg-black"></div>
           </div>
 
-          <AIBox />
-
           <div className="flex items-center justify-center w-px h-10 relative shrink-0 z-10">
             <div className="w-full h-full bg-black"></div>
             <div className="absolute left-1/2 -translate-x-1/2 h-4 w-1.5 rounded-full bg-[var(--theme-color)] animate-feed-y-2 shadow-[0_0_8px_var(--theme-color)]"></div>
@@ -198,12 +189,7 @@ const AIFeatureSection = () => {
 
         {/* DESKTOP LAYOUT (3-Column Grid — AI is dead center) */}
 
-        <div className="relative z-20 flex-shrink-0 w-[1200px] h-[550px] p-6">
-          <LottieAnimation
-            animationData={aiAnimation}
-            className="w-full h-full scale-[1.8] origin-center"
-          />
-        </div>
+        <AiLottie />
       </div>
     </section>
   );

@@ -13,7 +13,7 @@ import AIFeatureSection from "@/app/component/products/AIFeatureSection";
 import AccountsConnectSection from "@/app/component/products/AccountsConnectSection";
 import FadeInSection from "@/app/component/ui/FadeInSection";
 import LottieAnimation from "@/app/component/ui/LottieAnimation";
-import numberingsPillAnimation from "@/PillAnimations/numbering-pill.json";
+import numberingsPillAnimation from "@/LottieAnimations/numbering-pill.json";
 import { replaceLottieColor } from "@/lib/lottieColorReplace";
 
 interface ProductPageProps {
@@ -78,7 +78,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const themedNumberingsPill = replaceLottieColor(
     numberingsPillAnimation,
     IMPEX_AMBER,
-    themeColor
+    themeColor,
   );
 
   return (
@@ -120,7 +120,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           <TargetAudienceSection targetAudience={product.targetAudience} />
         </FadeInSection>
       </div>
-        {product.sez && <SEZSection sez={product.sez} />}
+      {product.sez && <SEZSection sez={product.sez} />}
 
       {/* Accounts-only: standalone/connected ecosystem section */}
       {slug === "accounts" && <AccountsConnectSection />}

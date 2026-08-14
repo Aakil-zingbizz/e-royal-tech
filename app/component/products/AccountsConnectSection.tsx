@@ -3,7 +3,7 @@
 import Image from "next/image";
 import FadeInSection from "@/app/component/ui/FadeInSection";
 import LottieAnimation from "@/app/component/ui/LottieAnimation";
-import accountsPillAnimation from "@/PillAnimations/accounts-pill.json";
+import accountsPillAnimation from "@/LottieAnimations/accounts-pill.json";
 
 // ── SVG icons ──────────────────────────────────────────────────────────────
 

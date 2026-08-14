@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Product, ProductBannerData } from "@/types/product";
 import FadeInSection from "@/app/component/ui/FadeInSection";
 import LottieAnimation from "@/app/component/ui/LottieAnimation";
-import heroPillAnimation from "@/PillAnimations/hero-pill.json";
+import heroPillAnimation from "@/LottieAnimations/hero-pill.json";
 import { replaceLottieColor } from "@/lib/lottieColorReplace";
 
 interface ProductBannerProps {
@@ -33,7 +33,7 @@ const ProductBanner = ({ banner, product }: ProductBannerProps) => {
   const themedPillAnimation = replaceLottieColor(
     heroPillAnimation,
     IMPEX_AMBER,
-    productThemeColor
+    productThemeColor,
   );
 
   const highlights = banner?.highlights ||
