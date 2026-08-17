@@ -46,7 +46,7 @@
         "subtitle": "ICEGATE Customs Filing Software"
       },
 
-      "mockupImage": "/products/dashboard-mockup.png"
+      "mockupImage": "/products/impex/impex-dashboard.webp"
     },
 
     "features": {
@@ -267,7 +267,7 @@
     "shortDescription": "Streamline freight forwarding operations with a cloud-based platform that automates documentation, shipment tracking, compliance, and reporting for air, sea, and multimodal logistics.",
     "logo": "/home/product-logo/freight.svg",
     "themeColor": "#2175BE",
-    "mockupImage": "/products/freight-mockup.png",
+    "mockupImage": "/products/freight/freight-dashboard.webp",
 
     "banner": {
       "titlePrefix": "eRoyal",
@@ -292,7 +292,7 @@
         "title": "E-FREIGHT",
         "subtitle": "Freight Forwarding Management Software"
       },
-      "mockupImage": "/products/dashboard-mockup.png"
+      "mockupImage": "/products/freight/freight-dashboard.webp"
     },
 
     "features": {
@@ -429,7 +429,7 @@
         "title": "E-ACCOUNTS",
         "subtitle": "Accounting & Financial Management"
       },
-      "mockupImage": "/products/dashboard-mockup.png"
+      "mockupImage": "/products/accounts/accounts-dashboard.webp"
     },
 
     "features": {
@@ -566,7 +566,7 @@
         "title": "E-SCM",
         "subtitle": "SCMTR Filing & Supply Chain Platform"
       },
-      "mockupImage": "/products/dashboard-mockup.png"
+      "mockupImage": "/products/scm/scm-dashboard.webp"
     },
 
     "features": {

@@ -11,21 +11,63 @@ interface TestimonialProps {
 const defaultTestimonials: TestimonialItem[] = [
   {
     quote:
-      "I am extremely satisfied with using eRoyal Tech Product (eRoyal IMPEX) and very grateful that I chose the right software product for my business, product is the very innovative and latest technology, thanks to eRoyal Tech Systems.",
-    name: "Saravanan",
-    title: "Managing Director, Super Shipping Service, Chennai",
+      "We had a very good experience with EROYAL TECH and their product EROYAL IMPEX. The customer support was very responsive and helpful whenever we had queries. The overall process was simple and easy to use, which made things very convenient. Wishing the SOFT GLOBAL team continued success! 👍",
+    name: "SH LOGISTICS PVT LTD",
+    title: "",
   },
   {
     quote:
-      "The seamless integration and intuitive interface have completely transformed how we handle our logistics operations. Highly recommend eRoyal Tech.",
-    name: "Priya Sharma",
-    title: "Operations Head, Global Freight Solutions",
+      "We wanted to share our appreciation for the e Royal application, which has been a real game changer in our daily customs operations. Filing BE and SB through the platform is smooth and straightforward, saving us both time and effort. The seamless electronic exchanges and always up‑to‑date HSN and notification masters make compliance much easier.",
+    name: "SUDARSHAN CARGO PVT LTD",
+    title: "",
   },
   {
     quote:
-      "Outstanding customer support and a product that truly understands the complexities of modern supply chains. A game changer for our team.",
-    name: "Michael Chen",
-    title: "CEO, TransGlobal Logistics",
+      "We have recently started using AI to create our operational checklists, and it has been extremely helpful for our team. Earlier, preparing the checklist used to take a considerable amount of time, but with the help of AI, the process has become much faster and more efficient.",
+    name: "Shree Parvathy Shipping",
+    title: "",
+  },
+  {
+    quote:
+      "We are using the Eroyal software. The support team is available anytime for filing related to ICEGATE and for resolving queries immediately. DGFT notification updates are provided regularly. The software is user-friendly, and ICEGATE filing for BE/SB/IRN is very fast.",
+    name: "DIPANKAR ROY",
+    title: "Director, S & S Logistics",
+  },
+  {
+    quote:
+      "We hereby wish to give feedback that the online customs filing software from M/S ERoyaltech systems is excellent. Their back end support and 24x7 customer service is also really wonderful. We are really pleased to use their service.",
+    name: "BALAJI GOVIND",
+    title: "Director, Venjoh Logistics Pvt Ltd",
+  },
+  {
+    quote:
+      "We had good experience from E-Royal Impex team (Mr Bala Guru) and also we are receiving good support from back end team every time.",
+    name: "PRADEEP CARGO SERVICES PVT LTD",
+    title: "",
+  },
+  {
+    quote:
+      "We are very glad to appreciate your service in Customs documentation in our SEZ unit. Your application was very user friendly, learning of application process by lower level team member also very easy. The platform running as well as updating was very quick and speed.",
+    name: "ATC Tires Private Limited",
+    title: "",
+  },
+  {
+    quote:
+      "We would like to express our sincere appreciation for the outstanding work done by the E-Royal team. Your dedication to quality, technical expertise, and ability to meet strict deadlines have been truly impressive.",
+    name: "MOVEMAX SYSTEM LOGISTICS PRIVATE LIMITED",
+    title: "",
+  },
+  {
+    quote:
+      "We sincerely appreciate the excellent service and support provided by your team. Royal Tech software has been user-friendly, reliable, and highly efficient, greatly supporting our operations. We especially value your team’s dedication and quick responsiveness in resolving issues at any time.",
+    name: "Jupiter Sea & Air Services Pvt Ltd.",
+    title: "",
+  },
+  {
+    quote:
+      "We would like to express our sincere appreciation for the excellent support and service provided by your team in relation to the customs filing processes. Your software has proven to be highly efficient, reliable, and user-friendly, enabling smooth handling of our customs documentation.",
+    name: "SEAGULL C & F AGENCIES PVT LTD",
+    title: "",
   },
 ];
 

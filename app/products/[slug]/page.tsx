@@ -136,9 +136,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       </FadeInSection>
 
       {(slug === "impex" || slug === "freight") && (
-        <FadeInSection animation="slide-right" duration={1200}>
-          <Testimonial testimonials={product.testimonials} />
-        </FadeInSection>
+        <Testimonial />
       )}
       <FadeInSection animation="blur-in" duration={1500}>
         <CTASection cta={product.cta} themeColor={themeColor} />

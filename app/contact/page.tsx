@@ -1,7 +1,57 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    industry: "",
+    address: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to submit form");
+      }
+
+      setStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        industry: "",
+        address: "",
+        message: "",
+      });
+    } catch (error: any) {
+      console.error(error);
+      setStatus("error");
+      setErrorMessage(error.message || "An unexpected error occurred.");
+    }
+  };
+
   return (
     <div className="bg-white min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,7 +63,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column: Form Container */}
           <div className="lg:col-span-2 bg-[#F1F8FF] rounded-[2rem] p-8 md:p-12">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Row 1 */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col space-y-2">
@@ -26,6 +76,9 @@ export default function ContactPage() {
                   <input
                     type="text"
                     id="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="ENTER YOUR NAME"
                     className="w-full bg-[#E4F2FF] text-[#333333] placeholder:text-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#006CB8] border-transparent"
                   />
@@ -40,6 +93,9 @@ export default function ContactPage() {
                   <input
                     type="email"
                     id="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="ENTER YOUR EMAIL"
                     className="w-full bg-[#E4F2FF] text-[#333333] placeholder:text-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#006CB8] border-transparent"
                   />
@@ -58,6 +114,8 @@ export default function ContactPage() {
                   <input
                     type="text"
                     id="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     placeholder="ENTER COMPANY NAME"
                     className="w-full bg-[#E4F2FF] text-[#333333] placeholder:text-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#006CB8] border-transparent"
                   />
@@ -72,6 +130,8 @@ export default function ContactPage() {
                   <input
                     type="text"
                     id="industry"
+                    value={formData.industry}
+                    onChange={handleChange}
                     placeholder="ENTER INDUSTRY"
                     className="w-full bg-[#E4F2FF] text-[#333333] placeholder:text-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#006CB8] border-transparent"
                   />
@@ -89,6 +149,8 @@ export default function ContactPage() {
                 <input
                   type="text"
                   id="address"
+                  value={formData.address}
+                  onChange={handleChange}
                   placeholder="ENTER YOUR ADDRESS"
                   className="w-full bg-[#E4F2FF] text-[#333333] placeholder:text-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#006CB8] border-transparent"
                 />
@@ -105,18 +167,33 @@ export default function ContactPage() {
                 <textarea
                   id="message"
                   rows={6}
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="ENTER YOUR MESSAGE"
                   className="w-full bg-[#E4F2FF] text-[#333333] placeholder:text-slate-400 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#006CB8] border-transparent resize-none"
                 ></textarea>
               </div>
 
-              {/* Optional: Add a submit button although it's not explicitly clear in the screenshot if there is one below the fold */}
-              <div className="pt-4 hidden">
+              {/* Messages & Submit button */}
+              {status === "success" && (
+                <div className="p-4 rounded-lg bg-green-50 text-green-700 font-medium">
+                  Thank you! Your message has been sent successfully.
+                </div>
+              )}
+              {status === "error" && (
+                <div className="p-4 rounded-lg bg-red-50 text-red-700 font-medium">
+                  {errorMessage}
+                </div>
+              )}
+
+              <div className="pt-4">
                 <button
                   type="submit"
-                  className="bg-[#006CB8] text-white font-bold uppercase tracking-wider py-3 px-8 rounded-lg hover:bg-[#005a9c] transition-colors"
+                  disabled={status === "submitting"}
+                  className="bg-[#006CB8] text-white font-bold uppercase tracking-wider py-3 px-8 rounded-lg hover:bg-[#005a9c] transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Submit
+                  {status === "submitting" ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>

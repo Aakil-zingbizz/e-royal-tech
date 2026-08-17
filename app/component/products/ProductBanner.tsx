@@ -160,14 +160,15 @@ const ProductBanner = ({ banner, product }: ProductBannerProps) => {
         />
       </div>
 
-      {/* Dashboard Image Section (At original large size) */}
-      <div className="relative z-10 w-full max-w-5xl lg:max-w-6xl aspect-[4/3] md:aspect-[16/9] flex items-center justify-center mb-16 md:mb-24">
-        <FadeInSection
-          animation="scale-up"
-          delay={750}
-          duration={1000}
-          className="w-full h-full relative"
-        >
+      <FadeInSection
+        animation="scale-up"
+        delay={750}
+        duration={1000}
+        className="w-full relative flex justify-center"
+      >
+        {/* Dashboard Image Section (At original large size) */}
+        <div className="relative z-10 w-full max-w-5xl lg:max-w-6xl aspect-[4/3] md:aspect-video flex items-center justify-center mb-16 md:mb-24 border-4 border-black rounded-[30px] mx-auto">
+       
           {/* Blurred Sphere Glow with #016CB8 */}
           <div
             className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[1000px] md:h-[650px] rounded-full -z-20 pointer-events-none opacity-50"
@@ -181,11 +182,12 @@ const ProductBanner = ({ banner, product }: ProductBannerProps) => {
             src={mockupImage}
             alt={`${titlePrefix} ${titleHighlight} Mockup`}
             fill
-            className="object-contain object-top -top-20 z-10"
+            className="object-cover z-10 rounded-[26px]"
             priority
           />
-        </FadeInSection>
+       
       </div>
+       </FadeInSection>
     </section>
   );
 };
